@@ -1,0 +1,3 @@
+# Ignore files with extension .env
+*.env
+*.error.log
