@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Core;
-use Bullnet\Http\{Request, Response};
-use Bullnet\Core\Router;
-use Bullnet\Exceptions\ParserException;
+namespace Bookstore\Core;
+use Bookstore\Http\{Request, Response};
+use Bookstore\Core\Router;
+use Bookstore\Exceptions\ParserException;
 
 
 final class Parser {

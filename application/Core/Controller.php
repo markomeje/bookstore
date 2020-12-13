@@ -1,8 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Core;
-use Bullnet\Core\Json;
-use Bullnet\Http\{Request, Response};
+namespace Bookstore\Core;
+use Bookstore\Core\Json;
+use Bookstore\Http\{Request, Response};
+use Bookstore\Library\Session;
 
 
 class Controller {
@@ -18,7 +19,7 @@ class Controller {
     }
 
     public function getCaptcha(){
-        $captcha = new Gregwar\Captcha\CaptchaBuilder;
+        $captcha = new \Gregwar\Captcha\CaptchaBuilder;
         $captcha->build();
         Session::set('captcha', $captcha->getPhrase());
         return $captcha;

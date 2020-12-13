@@ -1,15 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Http;
+namespace Bookstore\Http;
 
 
 final class Request {
 
 
-    public function path() {
-        $path = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
-        $position = strpos($path, '?');
-        return ($position === false) ? $path : substr($path, 0, $position);
+    public function uri() {
+        return isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/';
     }
 
 	public function method($method){

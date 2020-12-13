@@ -1,11 +1,18 @@
+@font-face {
+    font-family: AlfaSlabOne;
+    src: local("AlfaSlabOne"),
+       url(../fonts/AlfaSlabOne-Regular.ttf) format('truetype');
+    font-weight: 900;
+}
+
 :root {
-    --oxford: #0a2540;
-    --prussian: #0e3358;
+    --fogra: #011627;
+    --powder: #FDFFFC;
+    --tiffany: #2EC4B6;
     --alabaster: #f1f1e6;
-    --orange: #f14a16;
-    --white: #ffffff;
-    --darkpurple: #381D2A;
-    --selective: #FFBA08;
+    --rose: #E71D36;
+    --oxford: #02223C;
+    --orange: #FF9F1C;
 }
 
 body, html {
@@ -16,16 +23,48 @@ body, html {
     overflow-x: hidden
 }
 
-.bg-darkpurple {
-    background-color: var(--darkpurple);
+.bg-tiffany {
+    background-color: var(--tiffany);
+}
+
+.bg-rose {
+    background-color: var(--rose);
+}
+
+.text-rose {
+    color: var(--rose);
+}
+
+.bg-powder {
+    background-color: var(--powder);
 }
 
 .bg-alabaster {
     background-color: var(--alabaster);
 }
 
-.bg-prussian {
-    background-color: var(--prussian);
+.bg-fogra {
+    background-color: var(--fogra);
+}
+
+.bg-oxford {
+    background-color: var(--oxford);
+}
+
+.text-fogra {
+    color: var(--fogra);
+}
+
+.text-tiffany {
+    color: var(--tiffany);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.bg-orange {
+    background-color: var(--orange);
 }
 
 *:focus {
@@ -35,12 +74,8 @@ body, html {
             box-shadow: none !important;
 }
 
-.text-selective {
-    color: var(--selective);
-}
-
 .is-invalid {
-    border: 1px solid #dc3545 !important;
+    border: 1px solid var(--rose) !important;
 }
 
 ul {
@@ -51,11 +86,49 @@ ul {
 
 a:hover {
     opacity: 0.9;
+    text-decoration: underline !important;
 }
 
 .cursor-pointer {
     cursor: pointer;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bolder;
+    font-family: serif;
+}
+
+h1 {
+    font-size: 240%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+.br-sm {
+    border-radius: 12.5px !important;
+}
+
+.br-lg {
+    border-radius: 25px !important;
+}
+
+/*a,
+div,
+button {
+    font-family: serif;
+    font-size: 20px !important;;
+}
+
+p {
+    font-size: 22px;
+}*/
 
 .center-absolute {
     top: 50%;
@@ -67,4 +140,9 @@ a:hover {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.object-fit-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
 }

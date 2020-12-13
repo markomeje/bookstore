@@ -30,6 +30,8 @@
     <link rel="stylesheet" type="text/css" href="<?= PUBLIC_URL ;?>/css/frontend.css">
     <!-- Homepage CSS -->
     <link rel="stylesheet" type="text/css" href="<?= PUBLIC_URL ;?>/css/backend.css">
+    <!-- Pattern CSS -->
+    <link rel="stylesheet" type="text/css" href="<?= PUBLIC_URL ;?>/css/pattern.min.css">
     <!-- ico font css -->
     <link rel="stylesheet" type="text/css" href="<?= PUBLIC_URL ;?>/icons/icofont/icofont.min.css">
 </head>

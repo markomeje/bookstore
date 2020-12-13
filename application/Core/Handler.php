@@ -1,7 +1,7 @@
 <?php
 
-namespace Application\Core;
-use Application\Core\Logger;
+namespace Bookstore\Core;
+use Bookstore\Core\Logger;
 use \ErrorException;
 
  /**

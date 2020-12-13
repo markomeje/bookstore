@@ -56,15 +56,15 @@ $dotenv->required(['LIVE_DATABASE_HOST', 'LIVE_DATABASE_NAME', 'LIVE_DATABASE_US
  * Starting the session at the root
  * To avoid session error.
  */
-Bullnet\Library\Session::start();
+Bookstore\Library\Session::start();
 
 /**
  * [$application description]
  * @var Application
  */
 
-$request = new Bullnet\Http\Request;
-$app = new Bullnet\Core\Parser($request);
+$request = new Bookstore\Http\Request;
+$app = new Bookstore\Core\Parser($request);
 
 /**
  * ---------------------------------------------------------------------

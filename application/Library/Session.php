@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Library;
-use Bullnet\Http\Cookie;
+namespace Bookstore\Library;
+use Bookstore\Http\Cookie;
 
 
 class Session {

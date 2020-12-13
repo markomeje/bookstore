@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace Bullnet\Controllers;
-use Bullnet\Core\{Controller, View};
-use Bullnet\Http\Request;
+namespace Bookstore\Controllers;
+use Bookstore\Core\{Controller, View};
+use Bookstore\Http\Request;
 
 
 class AdminController extends Controller {

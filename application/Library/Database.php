@@ -1,7 +1,7 @@
 <?php
 
-namespace Bullnet\Library;
-use Bullnet\Core\Logger;
+namespace Bookstore\Library;
+use Bookstore\Core\Logger;
 use \Exception;
 use \PDO;
 

@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Core;
-use Bullnet\Core\{View};
-use Bullnet\Exceptions\RouterException;
-use Bullnet\Http\Response;
+namespace Bookstore\Core;
+use Bookstore\Core\{View};
+use Bookstore\Exceptions\RouterException;
+use Bookstore\Http\Response;
 
 
 final class Router {
@@ -11,7 +11,7 @@ final class Router {
     public $controller;
     public $method;
     public $arguments = [];
-    public const CONTROLLERS_NAMESPACE = 'Bullnet\Controllers\\';
+    public const CONTROLLERS_NAMESPACE = 'Bookstore\Controllers\\';
 
 
     public function __construct($controller, $method, $arguments) {
@@ -28,7 +28,6 @@ final class Router {
             if(method_exists($controller, $this->method) === false) throw new RouterException();
             empty($this->arguments) ? $controller->{$this->method}() : call_user_func_array([$controller, $this->method], $this->arguments);
         } catch (RouterException $error) {
-            var_dump($error);
             (new Response)->statusCode($error->code);
             $message = $error->getMessage();
             exit(View::render('frontend', 'codes/error', ['title' => $message, 'code' => $error->code, 'message' => $message]));

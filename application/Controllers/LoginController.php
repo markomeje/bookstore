@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace Bullnet\Controllers;
-use Bullnet\Core\{Controller, Json, View};
-use Bullnet\Models\Login;
+namespace Bookstore\Controllers;
+use Bookstore\Core\{Controller, Json, View};
+use Bookstore\Models\Login;
 
 
 class LoginController extends Controller {
@@ -13,7 +13,7 @@ class LoginController extends Controller {
 	}
 
 	public function index() {
-		$data = ['title' => 'Login', 'csrf' => ''];
+		$data = ['title' => 'Login'];
 		View::render('frontend', 'login/index', $data);
 	}
 
@@ -21,8 +21,8 @@ class LoginController extends Controller {
 		if ($this->request->method('post')) {
 			$email = isset($this->request->post()['email']) ? $this->request->post()['email'] : '';
 			$password = isset($this->request->post()['password']) ? $this->request->post()['password'] : '';
-			$rememberme = isset($this->request->post()['rememberme']) ? $this->request->post()['rememberme'] : '';
-			$response = (new Login($email, $password, $rememberme))->signin();
+			$data = ['email' => $email, 'password' => $password];
+			$response = (new Login)->signin($data);
 			$this->json->encode($response);
 		}
 	}

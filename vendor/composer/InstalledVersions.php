@@ -14,12 +14,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-dev',
-    'version' => 'dev-dev',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => '98878024f83c251a3604ae9350b55464fa398950',
+    'reference' => 'dcebf02f8e4cbc7d8e76d55db7edaafa9b648438',
     'name' => 'standard/bullnet',
   ),
   'versions' => 
@@ -33,64 +33,23 @@ private static $installed = array (
       ),
       'reference' => '7e279d2cd5d7fbb156ce46daada972355cea27bb',
     ),
-    'laminas/laminas-diactoros' => 
+    'gregwar/captcha' => 
     array (
-      'pretty_version' => '2.5.0',
-      'version' => '2.5.0.0',
+      'pretty_version' => 'v1.1.8',
+      'version' => '1.1.8.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4ff7400c1c12e404144992ef43c8b733fd9ad516',
+      'reference' => '6088ad3db59bc226423ad1476a9f0424b19b1866',
     ),
-    'laminas/laminas-httphandlerrunner' => 
+    'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
+      'pretty_version' => 'v6.2.0',
+      'version' => '6.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e1a5dad040e0043135e8095ee27d1fbf6fb640e1',
-    ),
-    'laminas/laminas-zendframework-bridge' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
-    ),
-    'league/route' => 
-    array (
-      'pretty_version' => '4.5.0',
-      'version' => '4.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5ccce47a0120c9036d02a805237b942210993320',
-    ),
-    'nikic/fast-route' => 
-    array (
-      'pretty_version' => 'v1.3.0',
-      'version' => '1.3.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '181d480e08d9476e61381e04a71b34dc0432e812',
-    ),
-    'orno/http' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '~1.0',
-      ),
-    ),
-    'orno/route' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '~1.0',
-      ),
+      'reference' => 'e38888a75c070304ca5514197d4847a59a5c853f',
     ),
     'phpoption/phpoption' => 
     array (
@@ -101,73 +60,23 @@ private static $installed = array (
       ),
       'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
     ),
-    'psr/container' => 
-    array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b7ce3b176482dbbc1245ebf52b181af44c2cf55f',
-    ),
-    'psr/http-factory' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
-    ),
-    'psr/http-factory-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'psr/http-message' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
-    ),
-    'psr/http-message-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'psr/http-server-handler' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'aff2f80e33b7f026ec96bb42f63242dc50ffcae7',
-    ),
-    'psr/http-server-middleware' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2296f45510945530b9dceb8bcedb5cb84d40c5f5',
-    ),
     'standard/bullnet' => 
     array (
-      'pretty_version' => 'dev-dev',
-      'version' => 'dev-dev',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '98878024f83c251a3604ae9350b55464fa398950',
+      'reference' => 'dcebf02f8e4cbc7d8e76d55db7edaafa9b648438',
+    ),
+    'symfony/finder' => 
+    array (
+      'pretty_version' => 'v5.2.0',
+      'version' => '5.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fd8305521692f27eae3263895d1ef1571c71a78d',
     ),
     'symfony/polyfill-ctype' => 
     array (
@@ -205,19 +114,14 @@ private static $installed = array (
       ),
       'reference' => 'fba64139db67123c7a57072e5f8d3db10d160b66',
     ),
-    'zendframework/zend-diactoros' => 
+    'yabacon/paystack-php' => 
     array (
-      'replaced' => 
+      'pretty_version' => 'v2.1.20',
+      'version' => '2.1.20.0',
+      'aliases' => 
       array (
-        0 => '^2.2.1',
       ),
-    ),
-    'zendframework/zend-httphandlerrunner' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.1.0',
-      ),
+      'reference' => '43972c02b6450912a242a1267ef38586be4b213a',
     ),
   ),
 );

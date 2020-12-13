@@ -1,54 +1,32 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Models;
-use Bullnet\Models\{User};
-use Bullnet\Http\Cookie;
-use Bullnet\Library\{Attempts};
+namespace Bookstore\Models;
+use Bookstore\Core\{Model};
+use Bookstore\Http\Cookie;
+use Bookstore\Library\Authentication;
 
-class Login extends User {
+class Login extends Model {
     
-    /**
-     * [User Login Email required]
-     * @var [type] string
-     */
-    public $email;
 
-    /**
-     * [$password required]
-     * @var [type] string
-     */
-    public $password;
+    public function __construct() {}
 
-    /**
-     * [$rememberme optional]
-     * @var [type]  string 
-     */
-    public $rememberme;
-
-    /**
-     * [$table Store User Login credentials]
-     * @var string
-     */
-    private $table = 'login';
-
-    public function __construct($email = '', $password = '', $rememberme = '') {
-        $this->email = $email; 
-        $this->password = $password; 
-        $this->rememberme = $rememberme;
-    }
-
-    public function signin() {
+    public function signin($post) {
     	if (Cookie::exists(ACCESS_DENIED_KEY) === true) {
     		return ['status' => 'access-denied'];
-    	}elseif (empty($this->email)) {
+    	}elseif (empty($post['email'])) {
     		return ['status' => 'empty-email'];
-    	}elseif (empty($this->password)) {
+    	}elseif (empty($post['password'])) {
     		return ['status' => 'empty-password'];
     	}
 
         try {
-            $user = (new User)->getByEmail($this->email);
-            if (!$user || !password_verify($this->password, $user->password)) return ['status' => 'invalid-user'];
+            $user = (new Users)->getByEmail($post['email']);
+            if (empty($user) || !password_verify($post['password'], $user->password)) {
+               return ['status' => 'invalid-login']; 
+            }else {
+               Authentication::authenticate(['id' => $user->id, 'role' => $user->role]);
+               return strtolower(Session::get('role')) === 'admin' ? ['status' => 'success', 'redirect' => WEBSITE_DOMAIN.'/dashboard'] : ['status' => 'success', 'redirect' => ''];
+            } 
         } catch (Exception $error) {
             Logger::log("USER SIGNIN ERROR", $error->getMessage(), __FILE__, __LINE__);
             return ["status" => "error"];

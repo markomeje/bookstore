@@ -1,14 +1,14 @@
 <?php
 
-namespace Bullnet\Library;
-use Bullnet\Http\{Cookie, Response};
-use Bullnet\Library\Session;
+namespace Bookstore\Library;
+use Bookstore\Http\{Cookie, Response};
+use Bookstore\Library\Session;
 
 class Authentication {
 
 	public function __construct() {
-		if (Session::get("isLoggedIn") === false) {
-			return (new Response(401, ["Location" => "/login"]))->redirect("/login");
+		if (Session::get('isLoggedIn') === false) {
+			return (new Response())->redirect('/login');
 		}
 	}
 
@@ -20,9 +20,9 @@ class Authentication {
 	}
 
 	public static function allow($roles = []) {
-		if (in_array(Session::get("role"), $roles, true) === false) {
+		if (!in_array(Session::get('role'), $roles, true) === false) {
 			Session::destroy();
-			Router::redirect("/login");
+			return (new Response())->redirect('/login');
 		}
 	}
 

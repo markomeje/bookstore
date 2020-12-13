@@ -4,7 +4,7 @@ namespace Bookstore\Core;
 use Bookstore\Core\Help;
 
 
-class Logger{
+class Logger {
 
 
     private function __construct(){}

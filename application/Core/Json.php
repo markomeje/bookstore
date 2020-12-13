@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
-namespace Bullnet\Core;
-use Bullnet\Core\Logger;
+namespace Bookstore\Core;
+use Bookstore\Core\Logger;
 use \Exception;
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bullnet\Core;
+namespace Bookstore\Core;
 
 
 class Help {

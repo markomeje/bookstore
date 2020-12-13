@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
 
-namespace Bullnet\Controllers;
-use Bullnet\Core\{Controller, View};
-use Bullnet\Http\Request;
+namespace Bookstore\Controllers;
+use Bookstore\Core\{Controller, View};
+use Bookstore\Models\Books;
 
 
 class HomeController extends Controller {
@@ -12,9 +12,10 @@ class HomeController extends Controller {
 		parent::__construct();
 	}
 
-	public function index() {
-		$data = ["title" => "Home | VTURefill"];
-		View::render("frontend", "home/index", $data);
+	public function index($pageNumber = 0) {
+		$allBooks = (new Books)->getAllBooks($pageNumber);
+		$data = ['title' => 'Home', 'allBooks' => $allBooks['books']];
+		View::render('frontend', 'home/index', $data);
 	}
 
 }

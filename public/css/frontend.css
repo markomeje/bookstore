@@ -1,0 +1,60 @@
+.website-logo {
+	width: 87px;
+	height: 61px;
+}
+
+.home-banner-section {
+	background-image: url(../images/banners/hero.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 140px 0 100px;
+}
+
+.about-banner-section,
+.author-banner-section,
+.contact-banner-section,
+.store-booklists-section {
+	padding: 140px 0 100px;
+}
+
+.home-booklists-section {
+	padding-bottom: 100px;
+}
+
+.home-author-section,
+.about-purpose-section {
+	padding: 120px 0;
+}
+
+.right-nav .forum-badge {
+	top: -12.5px;
+	right: -7.5px;
+	font-size: 10px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.right-nav a:hover {
+    color: var(--tiffany);
+    text-decoration: none;
+}
+
+.purpose-icon {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.author-biograph {
+	padding: 0 0 120px;
+}
+
+.bottom-section {
+	padding: 120px 0;
+}
+
+.footer-section {
+	border-top: 1px solid var(--oxford);
+}
