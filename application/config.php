@@ -41,7 +41,7 @@ defined('PAYSTACK_TEST_PUBLIC_KEY', 'pk_test_c11c47953d4145442c60e6e97e0524bb9ea
 
 define('REMEMBER_ME_COOKIE_NAME', 'h89hIteIHB7nb5yh3ufer7fad2q9yv98');
 define('COOKIE_PATH', '/');
-define('COOKIE_DOMAIN', DOMAIN);
+define('COOKIE_DOMAIN', WEBSITE_DOMAIN);
 define('COOKIE_SECURE', false);
 define('COOKIE_HTTP', false);
 define('COOKIE_EXPIRY', 3600 * 24 * 15); /** 15 days **/
