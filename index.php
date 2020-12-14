@@ -25,7 +25,7 @@ define('VENDOR_PATH', ROOT . DS . 'vendor');
  * Current Enviroment.
  * Should be changed in production
  */
-define('ENVIROMENT', 'development');
+define('ENVIROMENT', '');
 
 /**
  * Requiring the configuration file.
