@@ -3,8 +3,8 @@
 define('DEFAULT_CONTROLLER', 'home');
 define('DEFAULT_METHOD', 'index');
 
-define('SERVER_PROTOCOL', isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on' ? 'https://' : 'http://');
-define('WEBSITE_DOMAIN',  ENVIROMENT === 'development' ? 'http://bookstore.build' : SERVER_PROTOCOL.$_ENV['LIVE_WEBSITE_DOMAIN']);
+define('SERVER_PROTOCOL', isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on' ? true : false);
+define('WEBSITE_DOMAIN',  SERVER_PROTOCOL === false ? 'http://bookstore.build' : $_ENV['LIVE_WEBSITE_DOMAIN']);
 
 /**
  * Views PATHS
@@ -36,8 +36,8 @@ define('LIVE_DATABASE_USERNAME', $_ENV['LIVE_DATABASE_USERNAME']);
 define('LIVE_DATABASE_PASSWORD', $_ENV['LIVE_DATABASE_PASSWORD']); 
 define('LIVE_DATABASE_CHARSET', $_ENV['LIVE_DATABASE_CHARSET']);
 
-defined('PAYSTACK_API_TEST_SECRET_KEY', 'sk_test_f350cd8fedff13ddffc1ff1e12bc42b60ad62ae8');
-defined('PAYSTACK_API_TEST_PUBLIC_KEY', 'pk_test_c11c47953d4145442c60e6e97e0524bb9ead088c');
+defined('PAYSTACK_TEST_SECRET_KEY', 'sk_test_f350cd8fedff13ddffc1ff1e12bc42b60ad62ae8');
+defined('PAYSTACK_TEST_PUBLIC_KEY', 'pk_test_c11c47953d4145442c60e6e97e0524bb9ead088c');
 
 define('REMEMBER_ME_COOKIE_NAME', 'h89hIteIHB7nb5yh3ufer7fad2q9yv98');
 define('COOKIE_PATH', '/');

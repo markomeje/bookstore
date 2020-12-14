@@ -35,7 +35,7 @@ class Database {
       */
     public function __construct() {
         try{ 
-            if (ENVIROMENT === 'development') {
+            if (SERVER_PROTOCOL === false) {
                 $connect = 'mysql:dbname='.LOCAL_DATABASE_NAME.';host='.LOCAL_DATABASE_HOST.';charset='.LOCAL_DATABASE_CHARSET;
                 $this->pdo = new PDO($connect, LOCAL_DATABASE_USERNAME, LOCAL_DATABASE_PASSWORD);
             }else {

@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'dcebf02f8e4cbc7d8e76d55db7edaafa9b648438',
+    'reference' => 'bae0db14492138eff9ffe877a0a383ef3d177859',
     'name' => 'standard/bullnet',
   ),
   'versions' => 
@@ -67,7 +67,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'dcebf02f8e4cbc7d8e76d55db7edaafa9b648438',
+      'reference' => 'bae0db14492138eff9ffe877a0a383ef3d177859',
     ),
     'symfony/finder' => 
     array (

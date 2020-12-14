@@ -22,12 +22,6 @@ define('APPLICATION_PATH', ROOT . DS . 'application');
 define('VENDOR_PATH', ROOT . DS . 'vendor');
 
 /**
- * Current Enviroment.
- * Should be changed in production
- */
-define('ENVIROMENT', '');
-
-/**
  * Requiring the configuration file.
  *
  */
@@ -62,6 +56,7 @@ Bookstore\Library\Session::start();
  * [$application description]
  * @var Application
  */
+//var_dump($_SESSION);
 
 $request = new Bookstore\Http\Request;
 $app = new Bookstore\Core\Parser($request);

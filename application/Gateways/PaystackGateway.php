@@ -11,7 +11,7 @@ class PaystackGateway {
 	public $paystack;
 
 	public function __construct() {
-		$this->paystack = new Paystack(PAYSTACK_TEST_SECRET_KEY);
+		$this->paystack = new Paystack('sk_test_f350cd8fedff13ddffc1ff1e12bc42b60ad62ae8');
 	}
 
 	public function initialize($data = []) {
@@ -31,6 +31,5 @@ class PaystackGateway {
             return false;
 	    }
     }
-
 
 }

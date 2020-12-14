@@ -3,7 +3,7 @@
 namespace Bookstore\Models;
 use Bookstore\Core\{Model};
 use Bookstore\Http\Cookie;
-use Bookstore\Library\Authentication;
+use Bookstore\Library\{Authentication, Session};
 
 class Login extends Model {
     
@@ -24,7 +24,7 @@ class Login extends Model {
             if (empty($user) || !password_verify($post['password'], $user->password)) {
                return ['status' => 'invalid-login']; 
             }else {
-               Authentication::authenticate(['id' => $user->id, 'role' => $user->role]);
+               Authentication::authenticate(['id' => $user->id, 'role' => $user->role, 'isLoggedIn' => true]);
                return strtolower(Session::get('role')) === 'admin' ? ['status' => 'success', 'redirect' => WEBSITE_DOMAIN.'/dashboard'] : ['status' => 'success', 'redirect' => ''];
             } 
         } catch (Exception $error) {

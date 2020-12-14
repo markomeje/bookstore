@@ -18,7 +18,7 @@ class StoreController extends Controller {
 		View::render('frontend', 'store/index', $data);
 	}
 
-	public function book($id = 0) {
+	public function book($id) {
 		$data = ['title' => 'Store', 'book' => (new Books)->getBookById($id)];
 		View::render('frontend', 'store/book', $data);
 	}

@@ -1,6 +1,6 @@
 {
-    "name": "standard/bullnet",
-    "description": "An MVC Framework in PHP",
+    "name": "standard/bookstore",
+    "description": "An Online Book Store",
     "type": "project",
     "authors": [
         {
