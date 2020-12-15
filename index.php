@@ -1,5 +1,4 @@
 <?php declare(strict_types=1);
-die();
 
 /**
  * --------------------------------------------------
@@ -33,6 +32,10 @@ require APPLICATION_PATH . DS . 'config.php';
  */
 require VENDOR_PATH . DS . 'autoload.php';
 
+/**
+ * For Handling Exceptions
+ */
+Bookstore\Core\Handler::register();
 
 /*
 |--------------------------------------------------------------------------
@@ -52,12 +55,6 @@ $dotenv->required(['LIVE_DATABASE_HOST', 'LIVE_DATABASE_NAME', 'LIVE_DATABASE_US
  * To avoid session error.
  */
 Bookstore\Library\Session::start();
-
-/**
- * [$application description]
- * @var Application
- */
-//var_dump($_SESSION);
 
 $request = new Bookstore\Http\Request;
 $app = new Bookstore\Core\Parser($request);
