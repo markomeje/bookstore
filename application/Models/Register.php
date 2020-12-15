@@ -31,7 +31,7 @@ class Register extends Model {
             $data = ['status' => 'inactive', 'role' => 'user', 'email' => $post['email'], 'password' => password_hash($post['password'], PASSWORD_DEFAULT), 'phone' => $post['phone'], 'token' => $token];
             $database->beginTransaction();
             (new Users)->register($data);
-            // if(!Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token])) throw new Exception('Error Sending Mail With PHPMailer');
+            if(!Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token])) throw new Exception('Error Sending Mail With PHPMailer');
             $database->commit();
             return ['status' => 'success'];
         } catch (Exception $error) {

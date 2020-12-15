@@ -40,7 +40,7 @@ class Mailer {
         $body .= "Dear " . $email . ", Please Verify Your Email With The Following Link: ";
         $body .= EMAIL_VERIFICATION_URL . "/" . urlencode($data["token"]);
         $body .= " If you didn't Perform This Action With your email, Please contact the admin directly.";
-        $body .= " Regards From HERIUM";
+        $body .= " Regards From Success And Motivation Book Series";
         return $body;
 	}
 
@@ -49,7 +49,7 @@ class Mailer {
         $body .= "Dear " . $email . ", Please Use The Following Token To Reset Your Password: ";
         $body .= " " . $data["reset_token"];
         $body .= " If you didn't Perform This Action With your email, Please contact the admin directly.";
-        $body .= " Regards From HERIUM";
+        $body .= " Regards From Success And Motivation Book Series";
         return $body;
     }
 

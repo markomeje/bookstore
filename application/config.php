@@ -73,10 +73,5 @@ define('EMAIL_VERIFICATION', 1);
 define('EMAIL_VERIFICATION_SUBJECT', 'Email Verification');
 define('EMAIL_VERIFICATION_URL', WEBSITE_DOMAIN.'/register/verify');
 
-// RewriteEngine on
-// RewriteCond %{HTTP_HOST} ^charlesukemenam\.markomeje\.com$ [OR]
-// RewriteCond %{HTTP_HOST} ^www\.charlesukemenam\.markomeje\.com$
-// RewriteRule ^/?$ "https\:\/\/www\.charlesukemenam\.com" [R=301,L]
-
 
 
