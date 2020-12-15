@@ -22,12 +22,6 @@ define('APPLICATION_PATH', ROOT . DS . 'application');
 define('VENDOR_PATH', ROOT . DS . 'vendor');
 
 /**
- * Requiring the configuration file.
- *
- */
-require APPLICATION_PATH . DS . 'config.php';
-
-/**
  * Standard PHP way of autoloading classes - Using composer.
  */
 require VENDOR_PATH . DS . 'autoload.php';
@@ -46,9 +40,15 @@ Bookstore\Core\Handler::register();
 | Highly recommended for security purposes
 |
 */
-$dotenv = \Dotenv\Dotenv::createImmutable(ROOT, '.env');
+$dotenv = \Dotenv\Dotenv::createImmutable(ROOT);
 $dotenv->load();
 $dotenv->required(['LIVE_DATABASE_HOST', 'LIVE_DATABASE_NAME', 'LIVE_DATABASE_USERNAME', 'LIVE_DATABASE_PASSWORD', 'LIVE_DATABASE_CHARSET']);
+
+/**
+ * Requiring the configuration file.
+ */
+require APPLICATION_PATH . DS . 'config.php';
+
 
 /**
  * Starting the session at the root
@@ -56,6 +56,10 @@ $dotenv->required(['LIVE_DATABASE_HOST', 'LIVE_DATABASE_NAME', 'LIVE_DATABASE_US
  */
 Bookstore\Library\Session::start();
 
+/**
+ * [$request description]
+ * @var Bookstore
+ */
 $request = new Bookstore\Http\Request;
 $app = new Bookstore\Core\Parser($request);
 

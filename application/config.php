@@ -36,8 +36,8 @@ define('LIVE_DATABASE_USERNAME', $_ENV['LIVE_DATABASE_USERNAME']);
 define('LIVE_DATABASE_PASSWORD', $_ENV['LIVE_DATABASE_PASSWORD']); 
 define('LIVE_DATABASE_CHARSET', $_ENV['LIVE_DATABASE_CHARSET']);
 
-defined('PAYSTACK_TEST_SECRET_KEY', 'sk_test_f350cd8fedff13ddffc1ff1e12bc42b60ad62ae8');
-defined('PAYSTACK_TEST_PUBLIC_KEY', 'pk_test_c11c47953d4145442c60e6e97e0524bb9ead088c');
+define('PAYSTACK_TEST_SECRET_KEY', 'sk_test_f350cd8fedff13ddffc1ff1e12bc42b60ad62ae8');
+define('PAYSTACK_TEST_PUBLIC_KEY', 'pk_test_c11c47953d4145442c60e6e97e0524bb9ead088c');
 
 define('REMEMBER_ME_COOKIE_NAME', 'h89hIteIHB7nb5yh3ufer7fad2q9yv98');
 define('COOKIE_PATH', '/');
@@ -69,9 +69,9 @@ define('EMAIL_REPLY_TO', 'admin@charlesukemenam.com');
 define('EMAIL_DEBUG', 4);
 define('EMAIL_AUTH', true);
 
-defined('EMAIL_VERIFICATION', 1);
-defined('EMAIL_VERIFICATION_SUBJECT', 'Email Verification');
-defined('EMAIL_VERIFICATION_URL', WEBSITE_DOMAIN.'/register/verify');
+define('EMAIL_VERIFICATION', 1);
+define('EMAIL_VERIFICATION_SUBJECT', 'Email Verification');
+define('EMAIL_VERIFICATION_URL', WEBSITE_DOMAIN.'/register/verify');
 
 // RewriteEngine on
 // RewriteCond %{HTTP_HOST} ^charlesukemenam\.markomeje\.com$ [OR]
