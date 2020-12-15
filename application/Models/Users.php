@@ -16,11 +16,11 @@ class Users extends Model {
 		parent::__construct();
 	}
 
-	public function register($posted) {
+	public function register($data) {
 		try {
 			$database = Database::connect();
 			$database->prepare("INSERT INTO $this->table (email, role, password, phone, status, token) VALUES(:email, :role, :password, :phone, :status, :token)");
-			$database->execute($posted);
+			$database->execute($data);
 			return $database->rowCount() > 0;
 		} catch (Exception $error) {
 			Logger::log("CREATING USER ACCOUNT ERROR", $error->getMessage(), __FILE__, __LINE__);

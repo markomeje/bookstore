@@ -27,11 +27,11 @@ class Register extends Model {
 
         try {
             $database = Database::connect();
-            $token = Generate::string(25);
+            $token = Generate::string(62);
             $data = ['status' => 'inactive', 'role' => 'user', 'email' => $post['email'], 'password' => password_hash($post['password'], PASSWORD_DEFAULT), 'phone' => $post['phone'], 'token' => $token];
             $database->beginTransaction();
             (new Users)->register($data);
-            if(!Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token])) throw new Exception('Error Sending Mail With PHPMailer');
+            Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token]);
             $database->commit();
             return ['status' => 'success'];
         } catch (Exception $error) {

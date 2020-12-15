@@ -37,9 +37,9 @@ class Mailer {
 
 	private static function emailVerifyBody($email, $data) {
         $body  = "";
-        $body .= "Dear " . $email . ", Please Verify Your Email With The Following Link: ";
+        $body .= "Dear " . $email . ", Please Verify Your Email By Clicking On The Following Link: ";
         $body .= EMAIL_VERIFICATION_URL . "/" . urlencode($data["token"]);
-        $body .= " If you didn't Perform This Action With your email, Please contact the admin directly.";
+        $body .= ". If you didn't Perform This Action With your email, Please contact the admin directly.";
         $body .= " Regards From Success And Motivation Book Series";
         return $body;
 	}
