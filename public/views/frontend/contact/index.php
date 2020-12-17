@@ -38,7 +38,7 @@
 							</div>
 						</div>
 					</form>
-					<p class="text-fogra mt-4 font-weight-bolder">You Can Call <a href="">08130052359</a> Or Send A Mail To <a href="">author@charlesukemenam.com</a></p>
+					<p class="text-fogra mt-4 font-weight-bolder">You Can Call <a href="tel:08130052359">08130052359</a> Or Send A Mail To <a href="mailto:author@charlesukemenam.com">author@charlesukemenam.com</a></p>
 				</div>
 			</div>
 		</div>

@@ -8,6 +8,10 @@
         inputs.attr('autocomplete', 'off');
     });
 
+    $('.menu-icon-circle').on('click', function() {
+        $('.navbar-mobile').toggleClass('navbar-toggle');
+    });
+
 })(jQuery);
 
 function handleButton(button, spinner) {
