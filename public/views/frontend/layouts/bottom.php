@@ -41,6 +41,14 @@
 						<a href="mailto:author@charlesukemenam.com" class="text-white text-decoration-none bg-oxford d-block p-3 rounded">author@charlesukemenam.com</a>
 					</li>
 				</ul>
+				<div class="d-flex align-items-center bottom-icons mt-2">
+					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
+						<i class="icofont-facebook"></i>
+					</a>
+					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
+						<i class="icofont-instagram"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

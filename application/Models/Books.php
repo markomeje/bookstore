@@ -63,18 +63,6 @@ class Books extends Model {
 		}
 	}
 
-	public function bookAlreadyExists($name) {
-		try {
-			$database = Database::connect();
-			$database->prepare("SELECT name FROM {$this->table} WHERE name = :name LIMIT 1");
-			$database->execute(["name" => $name]);
-            return $database->rowCount() > 0;
-		} catch (Exception $error) {
-			Logger::log("CHECKING USER EMAIL EXISTS ERROR", $error->getMessage(), __FILE__, __LINE__);
-			return false;
-		}
-	}
-
 	public function deleteBook($id) {
 		try {
 			$book = $this->getBookById($id);

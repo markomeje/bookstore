@@ -3,12 +3,14 @@
 
 namespace Bookstore\Controllers;
 use Bookstore\Core\{Controller, Json, View};
+use Bookstore\Library\Authentication;
 
 
 class DashboardController extends Controller {
 	
 	public function __construct() {
 		parent::__construct();
+		Authentication::allow('admin');
 	}
 
 	public function index() {

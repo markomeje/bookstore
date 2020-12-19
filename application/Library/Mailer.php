@@ -15,6 +15,7 @@ class Mailer {
             $mail->SetFrom(EMAIL_FROM, EMAIL_FROM_NAME);
             $mail->AddReplyTo(EMAIL_REPLY_TO);
             $mail->isHTML(true);
+
             switch($type) {
                 case (EMAIL_VERIFICATION):
                     $mail->Body = self::emailVerifyBody($email, $data);
@@ -25,6 +26,12 @@ class Mailer {
                     $mail->Body = self::passwordResetBody($email, $data);
                     $mail->Subject = PASSWORD_RESET_SUBJECT;
                     $mail->AddAddress($email);
+                    break;
+                case (SEND_BOOK_AS_ATTACHMENT):
+                    $mail->Body = self::sendBookAsAttachmentBody($email, $data);
+                    $mail->Subject = SEND_BOOK_AS_ATTACHMENT_SUBJECT;
+                    $mail->AddAddress($email);
+                    $mail->addAttachment(PUBLIC_PATH . DS . 'pdfs' . DS . $data['book']);
                     break;
             }
             $mail->send();
@@ -49,6 +56,13 @@ class Mailer {
         $body .= "Dear " . $email . ", Please Use The Following Token To Reset Your Password: ";
         $body .= " " . $data["reset_token"];
         $body .= " If you didn't Perform This Action With your email, Please contact the admin directly.";
+        $body .= " Regards From Success And Motivation Book Series";
+        return $body;
+    }
+
+    private static function sendBookAsAttachmentBody($email) {
+        $body  = "";
+        $body .= "Dear " . $email . ", Thank You For Purchasing Our Book. Please find the book as an attachment below.";
         $body .= " Regards From Success And Motivation Book Series";
         return $body;
     }

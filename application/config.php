@@ -6,6 +6,9 @@ define('DEFAULT_METHOD', 'index');
 define('SERVER_PROTOCOL', isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on' ? true : false);
 define('WEBSITE_DOMAIN',  SERVER_PROTOCOL === false ? 'http://bookstore.build' : $_ENV['LIVE_WEBSITE_DOMAIN']);
 
+define('REFERER', isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '');
+define('HOST', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '');
+
 /**
  * Views PATHS
  */
@@ -51,12 +54,18 @@ define('SESSION_COOKIE_EXPIRY', 3600 * 24 * 60); /** 60 Days **/
 define('ENCRYPTION_KEY', 'H43ag5js60z4D86tgEsh6w4e385Y');
 define('REMEMBER_ME_COOKIE_EXPIRY', 3600 * 24 * 365); /** One Year **/
 
+define('REDIRECT_LINK_EXPIRY', 3600 * 24); /** I Day **/
+define('BOOK_TRACKER_EXPIRY', 3600 * 24); /** I Day **/
+
 define('ACCESS_DENIED_KEY', '672kbauh892ytqBGKA89jnb');
 define('ACCESS_DENIED_EXPIRY', 3600 * 24); /** 60 Days **/
 define('FAILED_LOGIN_ATTEMPTS_NAME', 'hjky456778434176HJuT67438');
 define('LOGIN_ATTEMPTS_EXPIRY', 3600 * 3); /** 3 hours **/
 
 define('PAGINATION_DEFAULT_LIMIT', 30);
+
+define('AMAZON_LINK', 'https://www.amazon.com/s?i=digital-text&rh=p_27%3ADr.+Charles+O.+Ukemenam&s=relevancerank&text=Dr.+Charles+O.+Ukemenam&ref=dp_byline_sr_ebooks_1');
+define('OKADABOOKS_LINK', 'https://okadabooks.com/user/charlesukemenam');
 
 define('EMAIL_HOST', 'charlesukemenam.com');
 define('EMAIL_USERNAME', 'admin@charlesukemenam.com');
@@ -72,6 +81,11 @@ define('EMAIL_AUTH', true);
 define('EMAIL_VERIFICATION', 1);
 define('EMAIL_VERIFICATION_SUBJECT', 'Email Verification');
 define('EMAIL_VERIFICATION_URL', WEBSITE_DOMAIN.'/register/verify');
+
+define('SEND_BOOK_AS_ATTACHMENT', 2);
+define('SEND_BOOK_AS_ATTACHMENT_SUBJECT', 'Book Purchase Successfull');
+
+define('PASSWORD_RESET', 3);
 
 
 

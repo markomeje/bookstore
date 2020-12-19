@@ -30,10 +30,15 @@
                 handleButton(button, spinner);
                 handleErrors($('.password'), $('.password-error'), 'Please fill in your password');
 
-            }else if (response.status === 'invalid-login') {
+            }else if (response.status === 'invalid-login' || response.status === 'invalid-user') {
                 handleButton(button, spinner);
                 message.removeClass('d-none alert-success').addClass('alert-danger');
                 message.html('Invalid Login Details.').fadeIn();
+
+            }else if (response.status === 'inactive-account') {
+                handleButton(button, spinner);
+                message.removeClass('d-none alert-success').addClass('alert-danger');
+                message.html('Your account is not verified. Please use the link sent to your email during registration to verify your account.').fadeIn();
 
             } else if (response.status === 'success') {
                 handleButton(button, spinner);

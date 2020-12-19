@@ -6,11 +6,7 @@ use Bookstore\Library\Session;
 
 class Authentication {
 
-	public function __construct() {
-		if (Session::get('isLoggedIn') === false) {
-			return (new Response())->redirect('/login');
-		}
-	}
+	public function __construct() {}
 
 	public static function authenticate($data) {
 		Cookie::set(session_name(), session_id(), time() + SESSION_COOKIE_EXPIRY, COOKIE_PATH, COOKIE_DOMAIN, COOKIE_SECURE, COOKIE_HTTP);
@@ -19,8 +15,8 @@ class Authentication {
 		}
 	}
 
-	public static function allow($roles = []) {
-		if (!in_array(Session::get('role'), $roles, true) === false) {
+	public static function allow($role) {
+		if (Session::get('role') !== $role || Session::get('isLoggedIn') === false) {
 			Session::destroy();
 			return (new Response())->redirect('/login');
 		}

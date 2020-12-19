@@ -2,7 +2,7 @@
 
 namespace Bookstore\Models;
 use Bookstore\Core\{Model, Logger};
-use Bookstore\Library\{Validate, Database, Session, Generate};
+use Bookstore\Library\{Validate, Database, Session, Generate, Mailer};
 use \Exception;
 use Bookstore\Models\Components\Pagination;
 use Bookstore\Gateways\{PaystackGateway};
@@ -43,10 +43,17 @@ class Payments extends Model {
 		try {
 		    $paystack = (new PaystackGateway)->verify($reference);
 		    if (strtolower($paystack->data->status) !== 'success') throw new Exception("Error Verifying Paystack Transaction");
+		    $database = Database::connect();
+		    $database->beginTransaction();
 		    $payment = self::getPaymentByReference($reference);
 			if (!self::updatePaymentStatus(['status' => 'paid', 'reference' => $reference, 'user' => $payment->user])) throw new Exception('Error Updating Payment Status For User '. $payment->user);
+			$book = (new Books)->getBookById($payment->book);
+			$user = (new Users)->getById($payment->user);
+			Mailer::mail(SEND_BOOK_AS_ATTACHMENT, $user->email, ['book' => $book->pdf]);
+			$database->commit();
             return ['status' => 'success'];
 		} catch (Exception $error) {
+			$database->rollback();
 			Logger::log("VERIFYING PAYMENT ERROR", $error->getMessage(), __FILE__, __LINE__);
 			return ['status' => 'error'];
 		}

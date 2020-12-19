@@ -13,7 +13,7 @@
 				</div>
 				<div class="col-12 col-md-5 col-lg-6 mb-4">
 					<div class="">
-						<img src="<?= PUBLIC_URL; ?>/images/assets/book.png" class="img-fluid h-100 w-100">
+						<img src="<?= PUBLIC_URL; ?>/images/assets/reading.png" class="img-fluid h-100 w-100">
 					</div>
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 	<div class="home-booklists-section bg-white">
 		<div class="container">
 			<h2 class="mb-2 text-fogra">Our Book Lists</h2>
-			<p class="text-muted">Our Success and Motivation Book Series is also available on <a href="https://www.amazon.com/s?i=digital-text&rh=p_27%3ADr.+Charles+O.+Ukemenam&s=relevancerank&text=Dr.+Charles+O.+Ukemenam&ref=dp_byline_sr_ebooks_1" target="_blank">Amazon</a> and <a href="https://www.okadabooks.com" target="_blank">Okada Books</a></p>
+			<p class="text-muted">Our Success and Motivation Book Series is also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a></p>
 			<?php if(empty($allBooks)): ?>
 				<div class="alert alert-info">No Books Yet</div>
 			<?php else: ?>
@@ -45,7 +45,7 @@
 										<?= Bookstore\Core\Help::limitStringLength(empty($book->description) ? '' : $book->description, 120); ?>
 									</a>
 									<div class="d-flex">
-										<p class="mr-4">NGN<?= empty($book->price) ? 0 : $book->price; ?></p>
+										<p class="mr-4">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></p>
 									</div>
 		                            <a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="btn bg-tiffany px-4 rounded-0 text-white">Buy Now</a>
 								</div>

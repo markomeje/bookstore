@@ -11,22 +11,24 @@ class Login extends Model {
     public function __construct() {}
 
     public function signin($post) {
-    	if (Cookie::exists(ACCESS_DENIED_KEY) === true) {
-    		return ['status' => 'access-denied'];
-    	}elseif (empty($post['email'])) {
+        $user = (new Users)->getByEmail($post['email']);
+    	if (empty($post['email'])) {
     		return ['status' => 'empty-email'];
-    	}elseif (empty($post['password'])) {
-    		return ['status' => 'empty-password'];
+        }elseif (empty($post['password'])) {
+            return ['status' => 'empty-password'];
+        }elseif (empty($user) || $user === false) {
+            return ['status' => 'invalid-user'];
+        }elseif (!password_verify($post['password'], $user->password)) {
+               return ['status' => 'invalid-login'];
+        }elseif (isset($user->status) && strtolower($user->status) === 'inactive') {
+            return ['status' => 'inactive-account'];
     	}
 
         try {
-            $user = (new Users)->getByEmail($post['email']);
-            if (empty($user) || !password_verify($post['password'], $user->password)) {
-               return ['status' => 'invalid-login']; 
-            }else {
-               Authentication::authenticate(['id' => $user->id, 'role' => $user->role, 'isLoggedIn' => true]);
-               return strtolower(Session::get('role')) === 'admin' ? ['status' => 'success', 'redirect' => WEBSITE_DOMAIN.'/dashboard'] : ['status' => 'success', 'redirect' => ''];
-            } 
+           Authentication::authenticate(['id' => $user->id, 'role' => $user->role, 'isLoggedIn' => true]);
+           $referer = (strpos(REFERER, HOST) !== false && strpos(REFERER, '/login') === 0) ? REFERER : '/store';
+           $redirect = strtolower(Session::get('role')) === 'admin' ? '/dashboard' : $referer;
+           return ['status' => 'success', 'redirect' => $redirect]; 
         } catch (Exception $error) {
             Logger::log("USER SIGNIN ERROR", $error->getMessage(), __FILE__, __LINE__);
             return ["status" => "error"];

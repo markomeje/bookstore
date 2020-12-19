@@ -4,12 +4,14 @@
 namespace Bookstore\Controllers;
 use Bookstore\Core\{Controller, Json, View};
 use Bookstore\Models\Books;
+use Bookstore\Library\Authentication;
 
 
 class BooksController extends Controller {
 	
 	public function __construct() {
 		parent::__construct();
+		Authentication::allow('admin');
 	}
 
 	public function index($pageNumber = 0) {

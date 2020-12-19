@@ -24,10 +24,10 @@
 								<h6 class="mr-4 mb-3">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></h6>
 							</div>
 							<?php if(Bookstore\Library\Session::get('isLoggedIn') === false): ?>
-								<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="">Register Here</a> or <a href="">Login Here</a> to your existing account to proceed.</div>
+								<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="<?= WEBSITE_DOMAIN; ?>/register">Register Here</a> or <a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>">Login Here</a> to your existing account to proceed.</div>
 								<div class="d-flex align-items-center mb-4">
-									<a href="javascript:;" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Register</a>
-									<a href="javascript:;" class="btn bg-rose px-4 rounded-0 text-white">Login</a>
+									<a href="<?= WEBSITE_DOMAIN; ?>/register" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Register</a>
+									<a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>" class="btn bg-rose px-4 rounded-0 text-white">Login</a>
 								</div>
 							<?php else: ?>
 								<p class="text-muted">We'll send your book to your account email as soon as your payment is successfull.</p>
@@ -36,7 +36,8 @@
 									Buy Now
 								</a>
 							<?php endif; ?>
-                            <p class="text-muted">Other Success and Motivation Book Series is also available on <a href="https://www.amazon.com" target="_blank">Amazon</a> and <a href="https://www.okadabooks.com" target="_blank">Okada Books</a></p>
+                            <p class="text-muted">Other Success and Motivation Book Series is also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a>
+                            </p>
 						</div>
 					</div>
 				</div>

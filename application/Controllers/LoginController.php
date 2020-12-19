@@ -21,7 +21,8 @@ class LoginController extends Controller {
 		if ($this->request->method('post')) {
 			$email = isset($this->request->post()['email']) ? $this->request->post()['email'] : '';
 			$password = isset($this->request->post()['password']) ? $this->request->post()['password'] : '';
-			$data = ['email' => $email, 'password' => $password];
+			$redirect = isset($this->request->get()['redirect']) ? $this->request->get()['redirect'] : '';
+			$data = ['email' => $email, 'password' => $password, 'redirect' => $redirect];
 			$response = (new Login)->signin($data);
 			$this->json->encode($response);
 		}

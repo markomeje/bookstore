@@ -30,7 +30,7 @@ class PaymentsController extends Controller {
 	public function verify() {
 		$reference = isset($this->request->get()['reference']) ? $this->request->get()['reference'] : '';
 		$response = (new Payments)->verify($reference);
-		$data = ['title' => '', 'payment' => $response['status']];
+		$data = ['title' => 'Verifying Book Payment', 'payment' => $response['status']];
 		View::render('frontend', 'payments/verify', $data);
 	}
 
