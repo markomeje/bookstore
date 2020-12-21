@@ -11,7 +11,7 @@ class PaystackGateway {
 	public $paystack;
 
 	public function __construct() {
-		$this->paystack = new Paystack(PAYSTACK_TEST_SECRET_KEY);
+		$this->paystack = new Paystack(PAYSTACK_LIVE_SECRET_KEY);
 	}
 
 	public function initialize($data = []) {

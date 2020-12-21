@@ -36,7 +36,7 @@
 									Buy Now
 								</a>
 							<?php endif; ?>
-                            <p class="text-muted">Other Success and Motivation Book Series is also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a>
+                            <p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a>
                             </p>
 						</div>
 					</div>

@@ -3,7 +3,7 @@
 	<div class="store-booklists-section bg-white">
 		<div class="container">
 			<h2 class="mb-2 text-fogra">All Books List</h2>
-			<p class="text-muted">Our Success and Motivation Book Series is also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a></p>
+			<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a></p>
 			<?php if(empty($allBooks)): ?>
 				<div class="alert alert-info">No Books Yet</div>
 			<?php else: ?>
