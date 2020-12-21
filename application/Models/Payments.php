@@ -88,10 +88,10 @@ class Payments extends Model {
 	public function getAllPayments($pageNumber = 0) {
 		try {
 			$database = Database::connect();
-			$pagination = Pagination::paginate("SELECT * FROM {$table}", [], $pageNumber);
+			$pagination = Pagination::paginate("SELECT * FROM $this->table", [], $pageNumber);
             $offset = $pagination->getOffset();
             $limit = $pagination->itemsPerPage;
-			$database->prepare("SELECT $this->table.*, users.email, FROM {$table}, users WHERE $this->table.user = users.id ORDER BY date DESC LIMIT {$limit} OFFSET {$offset}");
+			$database->prepare("SELECT * FROM $this->table ORDER BY date DESC LIMIT {$limit} OFFSET {$offset}");
 			$database->execute();
             return ["allPayments" => $database->fetchAll(), "pagination" => $pagination, "count" => $pagination->totalCount];
 		} catch (Exception $error) {

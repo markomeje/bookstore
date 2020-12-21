@@ -3,16 +3,16 @@
 	<div class="author-banner-section w-100">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4 col-lg-6 mb-4">
-					<div class="pattern-dots-md gray-light w-100" style="height: 400px;">
+				<div class="col-12 col-md-4 col-lg-5 mb-4">
+					<div class="pattern-dots-md gray-light w-100" style="height: 360px;">
 						<img style="transform: translate(20px, -20px); width: 90%;" src="<?= PUBLIC_URL; ?>/images/assets/photo.jpg" class="img-fluid h-100 object-fit-cover">
 					</div>
 				</div>
-				<div class="col-12 col-md-8 col-lg-6 mb-4">
+				<div class="col-12 col-md-8 col-lg-7 mb-4">
 					<h1 class="text-fogra">Dr. <span class="text-tiffany">Charles O.</span> Ukemenam<span class="text-rose">.</span></h1>
-					<div class="text-muted mb-4">He is a retired Banker, Finanacial and Management Consultant. He holds both Masters and Doctoral Degrees from the University of Benin, Edo State Nigeria. He is also a Fellow of the Chartered Institute of Bankers (FCIB), London and Nigeria respectively; Member, the Institute of Management Consultants of Nigeria, IMCON, etc.</div>
+					<div class="text-muted mb-4">Is a retired Banker, Finanacial and Management Consultant. He holds both Masters and Doctoral Degrees from the University of Benin, Edo State Nigeria. He is also a Fellow of the Chartered Institute of Bankers (FCIB), London and Nigeria respectively; Member, the Institute of Management Consultants of Nigeria, IMCON, etc.</div>
 					<div class="d-flex align-items-center">
-						<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="btn btn-lg font-weight-bold px-4 py-2 border-0 rounded-0 bg-tiffany text-white mr-4 ">Contact Author</a>
+						<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="btn px-4 border-0 rounded-0 bg-tiffany text-white mr-4 ">Contact Author</a>
 					</div>
 				</div>
 			</div>

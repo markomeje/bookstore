@@ -31,7 +31,7 @@
 								</div>
 							<?php else: ?>
 								<p class="text-muted">We'll send your book to your account email as soon as your payment is successfull.</p>
-								<a href="javascript:;" class="btn mb-4 btn-lg border-0 bg-tiffany text-white payment-button rounded-0" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= $id; ?>">
+								<a href="javascript:;" class="btn mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= $id; ?>">
 									<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none payment-spinner mb-1">
 									Buy Now
 								</a>

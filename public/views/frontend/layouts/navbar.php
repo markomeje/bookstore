@@ -33,29 +33,29 @@
 		</div>
 	</div>
 </div>
-<div class="navbar-mobile position-fixed bg-white px-4">
+<div class="navbar-mobile position-fixed bg-alabaster px-4">
 	<div class="mobile-content">
-		<ul class="flex-column">
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/" class="text-fogra text-decoration-none">Home</a>
+		<ul class="">
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-home"></i> Home</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/about" class="text-fogra text-decoration-none">About</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/about" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-book"></i> About</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/store" class="text-fogra text-decoration-none">Store</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/store" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-cart-alt"></i> Store</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/author" class="text-fogra text-decoration-none position-relative">Author</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/author" class="d-block border-bottom pb-2 text-muted text-decoration-none position-relative"><i class="icofont-teacher"></i> Author</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="text-fogra text-decoration-none">Contact</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-contacts"></i> Contact</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/register" class="text-fogra text-decoration-none">Register</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/register" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-sign-out"></i> Register</a>
 			</li>
-			<li class="mr-4 mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/login" class="text-fogra text-decoration-none">Login</a>
+			<li class="mb-3">
+				<a href="<?= WEBSITE_DOMAIN; ?>/login" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-sign-in"></i> Login</a>
 			</li>
 		</ul>
 	</div>

@@ -41,12 +41,20 @@
 						<a href="mailto:author@charlesukemenam.com" class="text-white text-decoration-none bg-oxford d-block p-3 rounded">author@charlesukemenam.com</a>
 					</li>
 				</ul>
-				<div class="d-flex align-items-center bottom-icons mt-2">
+				<div class="d-flex align-items-center bottom-icons mt-2 mb-3">
 					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
 						<i class="icofont-facebook"></i>
 					</a>
 					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
 						<i class="icofont-instagram"></i>
+					</a>
+					<a href="<?= AMAZON_LINK; ?>" target="_blank" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
+						<i class="icofont-brand-amazon"></i>
+					</a>
+				</div>
+				<div>
+					<a href="<?= OKADABOOKS_LINK; ?>" target="_blank">
+						<img src="<?= PUBLIC_URL; ?>/images/assets/okadabooks.jpg" class="img-fluid">
 					</a>
 				</div>
 			</div>

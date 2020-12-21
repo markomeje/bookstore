@@ -8,12 +8,12 @@
 					<div class="text-muted mb-4">The three-fold Purpose of our book series is to promote reading culture amongst the youths particularly, Nigerians and Africans in general.</div>
 					<div class="d-flex align-items-center">
 						<a href="<?= WEBSITE_DOMAIN; ?>/store" class="btn px-4 border-0 rounded-0 bg-tiffany text-white mr-4">Visit Store</a>
-						<a href="<?= WEBSITE_DOMAIN; ?>/about" class="btn px-4 border-0 rounded-0 bg-tiffany text-white">Learn More</a>
+						<a href="<?= WEBSITE_DOMAIN; ?>/about" class="btn px-4 border-0 rounded-0 bg-rose text-white">Learn More</a>
 					</div>
 				</div>
 				<div class="col-12 col-md-5 col-lg-6 mb-4">
 					<div class="">
-						<img src="<?= PUBLIC_URL; ?>/images/assets/reading.png" class="img-fluid h-100 w-100">
+						<img src="<?= PUBLIC_URL; ?>/images/assets/plain.png" class="img-fluid h-100 w-100">
 					</div>
 				</div>
 			</div>
@@ -47,7 +47,10 @@
 									<div class="d-flex">
 										<p class="mr-4">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></p>
 									</div>
-		                            <a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="btn bg-tiffany px-4 rounded-0 text-white">Buy Now</a>
+									<div class="d-flex">
+										<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Buy Now</a>
+										<a href="<?= WEBSITE_DOMAIN; ?>/store" class="btn bg-rose px-4 rounded-0 text-white">Visit Store</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -61,7 +64,8 @@
 			<div class="row align-items-center">
 				<div class="col-12 col-md-7 mb-5">
 					<h2 class="text-fogra">About The Author</h2>
-					<div class="card-text text-muted mb-3">He is a retired Banker, Finanacial and Management Consultant. He holds both Masters and Doctoral Degrees from the University of Benin, Edo State Nigeria.</div>
+					<p class="text-muted font-weight-bold">Dr. Charles O. Ukemenam</p>
+					<div class="card-text text-muted mb-3">Is a retired Banker, Finanacial and Management Consultant. He holds both Masters and Doctoral Degrees from the University of Benin, Edo State Nigeria.</div>
 					<a href="<?= WEBSITE_DOMAIN; ?>/author" class="btn rounded-0 px-4 bg-rose text-white border-bottom mr-4">Learn More</a>
 				</div>
 				<div class="col-12 col-md-5 mb-4">

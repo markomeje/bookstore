@@ -4,7 +4,7 @@
 namespace Bookstore\Controllers;
 use Bookstore\Core\{Controller, Json, View};
 use Bookstore\Models\Payments;
-use Bookstore\Library\{Session};
+use Bookstore\Library\{Session, Authentication};
 
 
 class PaymentsController extends Controller {
@@ -14,6 +14,7 @@ class PaymentsController extends Controller {
 	}
 
 	public function index($pageNumber = 0) {
+		Authentication::allow('admin');
 		$allPayments = (new Payments)->getAllPayments($pageNumber);
 		$data = ['title' => 'Payments', 'allPayments' => $allPayments['payments']];
 		View::render('backend', 'payments/index', $data);

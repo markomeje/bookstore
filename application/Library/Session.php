@@ -67,7 +67,6 @@ class Session {
 
         if(session_status() === PHP_SESSION_ACTIVE){
             session_destroy();
-            return true;
         }
     }
 

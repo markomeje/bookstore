@@ -4,6 +4,8 @@
 namespace Bookstore\Controllers;
 use Bookstore\Core\{Controller, Json, View};
 use Bookstore\Models\Login;
+use Bookstore\Library\Session;
+use Bookstore\Http\Response;
 
 
 class LoginController extends Controller {
@@ -25,6 +27,14 @@ class LoginController extends Controller {
 			$data = ['email' => $email, 'password' => $password, 'redirect' => $redirect];
 			$response = (new Login)->signin($data);
 			$this->json->encode($response);
+		}
+	}
+
+	public function logout() {
+		if (Session::get('isLoggedIn') === true) {
+			Session::delete('id');
+			Session::destroy();
+			return (new Response)->redirect('/login');
 		}
 	}
 

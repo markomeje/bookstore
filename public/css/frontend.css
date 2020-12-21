@@ -112,6 +112,6 @@
 	}
 
 	.navbar-mobile {
-		display: flex;
+		display: block;
 	}
 }
