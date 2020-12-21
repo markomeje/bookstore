@@ -30,6 +30,25 @@ class RegisterController extends Controller {
 		}
 	}
 
+	public function success($token = '') {
+		$data = ['title' => 'Registration Successful'];
+		View::render('frontend', 'register/success', $data);
+	}
+
+	public function resend() {
+		if ($this->request->method('post')) {
+			$email = isset($this->request->post()['email']) ? $this->request->post()['email'] : '';
+			$data = ['email' => $email];
+			$response = (new Register)->resend($data);
+			$this->json->encode($response);
+		}
+	}
+
+	public function verify($token = '') {
+		$data = ['title' => 'Verify', 'verification' => (new Register)->verify($token)];
+		View::render('frontend', 'register/verify', $data);
+	}
+
 }
 
 

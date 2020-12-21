@@ -7,7 +7,6 @@
 					<div class="my-3">
 						<h2 class="text-fogra">Register Here</h2>
 						<form action="javascript:;" method="post" class="register-form" data-action="<?= WEBSITE_DOMAIN; ?>/register/signup" autocomplete="off">
-							<div class="alert my-3 px-3 register-message d-none"></div>
 							<div class="form-row">
 								<div class="form-group input-group-lg col-md-6">
 									<label class="text-muted">Email</label>
@@ -44,6 +43,7 @@
 								<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none register-spinner mb-1">
 								Register
 							</button>
+							<div class="alert mt-4 px-3 register-message d-none"></div>
 							<div class="pt-3 pb-5">
 								<a href="<?= WEBSITE_DOMAIN; ?>/login" class="text-muted float-left">Already Have An Account? Login</a>
 							</div>

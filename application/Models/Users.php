@@ -64,4 +64,42 @@ class Users extends Model {
 		}
 	}
 
+	public function getByToken($token) {
+		try {
+			$database = Database::connect();
+			$database->prepare("SELECT * FROM $this->table WHERE token = :token LIMIT 1");
+			$database->execute(['token' => $token]);
+            return $database->fetch();
+		} catch (Exception $error) {
+			Logger::log("CHECKING TOKEN EXISTS ERROR", $error->getMessage(), __FILE__, __LINE__);
+			return false;
+		}
+	}
+
+	public function updateStatus($token) {
+		try {
+			$user = $this->getByToken($token);
+			if(empty($user) || $user === false) return false;
+			$database = Database::connect();
+			$database->prepare("UPDATE $this->table SET status = :status, token = :token WHERE id = :id LIMIT 1");
+			$database->execute(['token' => null, 'status' => 'active', 'id' => $user->id]);
+            return $database->rowCount() > 0;
+		} catch (Exception $error) {
+			Logger::log("ACTIVATING ACCOUNT ERROR", $error->getMessage(), __FILE__, __LINE__);
+			return false;
+		}
+	}
+
+	public function updateVerificationToken($data) {
+		try {
+			$database = Database::connect();
+			$database->prepare("UPDATE $this->table SET token = :token WHERE email = :email LIMIT 1");
+            $database->execute($data);
+            return $database->rowCount() > 0;
+		} catch (Exception $error) {
+			Logger::log('UPDATING VERIFICATION EMAIL TOKEN ERROR', $error->getMessage(), __FILE__, __LINE__);
+            return false;
+		}
+	}
+
 }
