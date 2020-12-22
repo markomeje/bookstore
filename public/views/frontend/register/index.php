@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="row justify-content-center pt-5">
 				<div class="col-12">
-					<div class="my-3">
+					<div class="mb-3 mt-2">
 						<h2 class="text-fogra">Register Here</h2>
 						<form action="javascript:;" method="post" class="register-form" data-action="<?= WEBSITE_DOMAIN; ?>/register/signup" autocomplete="off">
 							<div class="form-row">
@@ -38,7 +38,13 @@
 									<small class="error captcha-error text-danger"></small>
 								</div>
 							</div>
-							<img src="<?= $captcha->inline(); ?>" class="mt-2">
+							<div class="row">
+								<div class="col-12 col-md-4 col-lg-3">
+									<div class="mt-2" style="height: 80px;">
+										<img src="<?= $captcha->inline(); ?>" class="img-fluid w-100 h-100">
+									</div>
+								</div>
+							</div>
 							<button type="submit" class="btn mt-4 btn-lg border-0 bg-tiffany text-white register-button btn-block">
 								<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none register-spinner mb-1">
 								Register
