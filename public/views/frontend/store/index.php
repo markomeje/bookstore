@@ -28,7 +28,7 @@
 									<div class="d-flex">
 										<p class="mr-4">NGN<?= empty($book->price) ? 0 : $book->price; ?></p>
 									</div>
-		                            <a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>2" class="btn bg-tiffany px-4 rounded-0 text-white">Buy Now</a>
+		                            <a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>" class="btn bg-tiffany px-4 rounded-0 text-white">Buy Now</a>
 								</div>
 							</div>
 						</div>

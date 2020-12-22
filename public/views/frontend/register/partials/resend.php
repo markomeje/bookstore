@@ -1,5 +1,5 @@
 <form action="javascript:;" method="post" class="resend-email-form" data-action="<?= WEBSITE_DOMAIN; ?>/register/resend" autocomplete="off">
-	<h3 class="text-fogra">Did'nt Get An Email?</h3>
+	<h3 class="text-fogra">Resend Verification Email?</h3>
 	<p>Please enter your registration email below for a new verificaion link.</p>
 	<div class="form-row">
 		<div class="form-group input-group-lg col-12">
