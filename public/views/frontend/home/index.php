@@ -30,25 +30,26 @@
 					<?php $latestThreeBooks = count($allBooks) > 3 ? array_slice($allBooks, 0, 3) : $allBooks; ?>
 					<?php foreach($latestThreeBooks as $book): ?>
 						<?php $id = empty($book->id) ? 0 : $book->id; ?>
+						<?php $title = Bookstore\Core\Help::explodeImplodeByDelimeter(' ', '-', strtolower($book->title)); ?>
 						<div class="col-12 col-md-6 col-lg-4 mb-4">
 							<div class="card border-0 position-relative">
-								<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>">
+								<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>">
 									<img src="<?= PUBLIC_URL; ?>/images/books/<?= empty($book->image) ? 'def.jpg' : $book->image; ?>" class="card-img-top shadow">
 								</a>
 								<div class="card-body px-0">
 									<h6 class="card-title mt-2">
-										<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="text-fogra">
+										<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>" class="text-fogra">
 											<?= empty($book->title) ? 0 : $book->title; ?>
 										</a>
 									</h6>
-									<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="card-text text-muted mb-3 d-block">
+									<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>" class="card-text text-muted mb-3 d-block">
 										<?= Bookstore\Core\Help::limitStringLength(empty($book->description) ? '' : $book->description, 120); ?>
 									</a>
 									<div class="d-flex">
 										<p class="mr-4">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></p>
 									</div>
 									<div class="d-flex">
-										<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Buy Now</a>
+										<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Buy Now</a>
 										<a href="<?= WEBSITE_DOMAIN; ?>/store" class="btn bg-rose px-4 rounded-0 text-white">Visit Store</a>
 									</div>
 								</div>

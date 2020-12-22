@@ -12,7 +12,7 @@ class AboutController extends Controller {
 	}
 
 	public function index($pageNumber = 0) {
-		$data = ['title' => 'About'];
+		$data = ['title' => 'Succcess and Motivation Book Series written by Dr. Charles O. Ukemenam helps to promote reading culture amongst the youths, particularly, Nigerians and Africans in general. | About'];
 		View::render('frontend', 'about/index', $data);
 	}
 

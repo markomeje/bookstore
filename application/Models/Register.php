@@ -31,7 +31,7 @@ class Register extends Model {
             $data = ['status' => 'inactive', 'role' => 'user', 'email' => $post['email'], 'password' => password_hash($post['password'], PASSWORD_DEFAULT), 'phone' => $post['phone'], 'token' => $token];
             $database->beginTransaction();
             (new Users)->register($data);
-            // Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token]);
+            Mailer::mail(EMAIL_VERIFICATION, $post['email'], ['token' => $token]);
             $database->commit();
             return ['status' => 'success', 'redirect' => WEBSITE_DOMAIN.'/register/success'];
         } catch (Exception $error) {

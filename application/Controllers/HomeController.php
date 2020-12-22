@@ -14,7 +14,7 @@ class HomeController extends Controller {
 
 	public function index($pageNumber = 0) {
 		$allBooks = (new Books)->getAllBooks($pageNumber);
-		$data = ['title' => 'Home', 'allBooks' => $allBooks['books']];
+		$data = ['title' => '', 'allBooks' => $allBooks['books']];
 		View::render('frontend', 'home/index', $data);
 	}
 

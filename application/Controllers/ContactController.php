@@ -12,7 +12,7 @@ class ContactController extends Controller {
 	}
 
 	public function index($pageNumber = 0) {
-		$data = ['title' => 'Contact'];
+		$data = ['title' => 'Success and Motivation Books Series | Contact'];
 		View::render('frontend', 'contact/index', $data);
 	}
 

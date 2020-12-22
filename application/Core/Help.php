@@ -6,12 +6,10 @@ namespace Bookstore\Core;
 class Help {
 
 
-	public static function getFiatCurrencies() {
-		return ["NGN", "USD", "EUR"];
-	}
-
-	public static function getCryptoCurrencies() {
-		return ["BTC" => "Bitcoin", "BCH" => "Bitcoin Cash", "LTC" => "Litecoin", "ETH" => "Ether", "TRX" => "TRON", "LTCT" => "Litecoin Testnet"];
+	public static function explodeImplodeByDelimeter($explodeDelimeter, $implodeDeleimeter, $string) {
+		$array = explode($explodeDelimeter, $string);
+		$newString = implode($implodeDeleimeter, $array);
+		return $newString;
 	}
 
 	public static function getAllCountries() {
@@ -109,12 +107,6 @@ class Help {
 	    }
 	}
 
-	public static function getAge($birthdate) {
-		$birthyear = date("Y", strtotime($birthdate));
-		$age = (date("Y") - $birthyear);
-		return $age;
-	}
-
 	public static function calculatePercent($top, $bottom) {
 		$percent = (($top/$bottom) * 100);
 		return round($percent);
@@ -129,36 +121,12 @@ class Help {
 		return ["Abia", "Abuja", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"];
 	}
 
-	public static function getRelationshipStatus() {
-		return ["Married", "Widowed", "Single", "Divorced"];
-	}
-
 	public static function formatDatetime($datetime = "") {
 		return (empty($datetime) || $datetime === "") ? date("F j, Y, g:i a") : date("F j, Y, g:i a", strtotime($datetime));
 	}
 
 	public static function formatDate($date = "") {
 		return (empty($date) || $date === "") ? date("F j, Y") : date("F j, Y", strtotime($date));
-	}
-
-	public static function getWeeksOfAMonth($month, $year) {
-		$numberOfDays = date("t", mktime(0, 0, 0, $month, 1, $year));
-		$lastDay = date("t", mktime(0, 0, 0, $month, 1, $year));
-		$numberOfWeeks = 0;
-		$countOfWeeks = 0;
-		while ($numberOfWeeks < $lastDay) {
-			$numberOfWeeks += 7;
-			$countOfWeeks ++;
-		}
-		return $countOfWeeks;
-	}
-
-	public static function formatTime($time = "") {
-		return (empty($time) || $time === "") ? date("g:i a") : date("g:i a", strtotime($time));
-	}
-
-	public static function getGenders() {
-		return ["Male", "Female"];
 	}
 
 }

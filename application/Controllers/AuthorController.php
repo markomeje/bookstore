@@ -12,7 +12,7 @@ class AuthorController extends Controller {
 	}
 
 	public function index($pageNumber = 0) {
-		$data = ['title' => 'The Author'];
+		$data = ['title' => 'Dr. Charles O. Ukemenam is a retired Banker, Finanacial and Management Consultant. He holds both Masters and Doctoral Degrees from the University of Benin, Edo State Nigeria. He is also a Fellow of the Chartered Institute of Bankers (FCIB), London and Nigeria respectively; Member, the Institute of Management Consultants of Nigeria, IMCON, etc.'];
 		View::render('frontend', 'author/index', $data);
 	}
 
