@@ -87,7 +87,7 @@
             dataType: 'json'
         });
 
-        request.done(function(response){email-not-exists
+        request.done(function(response){
             if (response.status === 'invalid-email') {
                 handleButton(button, spinner);
                 handleErrors($('.email'), $('.email-error'), 'Your email is invalid.');

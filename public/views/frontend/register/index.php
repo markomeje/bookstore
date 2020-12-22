@@ -41,7 +41,7 @@
 							<div class="row">
 								<div class="col-12 col-md-4 col-lg-3">
 									<div class="mt-2" style="height: 80px;">
-										<img src="<?= $captcha->inline(); ?>" class="img-fluid w-100 h-100">
+										<img src="<?= $captcha->inline(); ?>" class="img-fluid w-100 h-100 border">
 									</div>
 								</div>
 							</div>
