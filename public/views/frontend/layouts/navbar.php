@@ -37,25 +37,60 @@
 	<div class="mobile-content">
 		<ul class="">
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-home"></i> Home</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Home</span>
+						<i class="icofont-home"></i>
+					</div>
+				</a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/about" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-book"></i> About</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/about" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>About</span>
+						<i class="icofont-book"></i>
+					</div>
+				</a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/store" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-cart-alt"></i> Store</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/store" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Store</span>
+						<i class="icofont-cart-alt"></i>
+					</div>
+				</a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/author" class="d-block border-bottom pb-2 text-muted text-decoration-none position-relative"><i class="icofont-teacher"></i> Author</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/author" class="d-block border-bottom pb-2 text-muted text-decoration-none position-relative">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Author</span>
+						<i class="icofont-teacher"></i>
+					</div>
+				</a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-contacts"></i> Contact</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/contact" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Contact</span>
+						<i class="icofont-contacts"></i>
+					</div>
+				 </a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/register" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-sign-out"></i> Register</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/register" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Register</span>
+						<i class="icofont-sign-out"></i>
+					</div>
+				</a>
 			</li>
 			<li class="mb-3">
-				<a href="<?= WEBSITE_DOMAIN; ?>/login" class="d-block border-bottom pb-2 text-muted text-decoration-none"><i class="icofont-sign-in"></i> Login</a>
+				<a href="<?= WEBSITE_DOMAIN; ?>/login" class="d-block border-bottom pb-2 text-muted text-decoration-none">
+					<div class="d-flex justify-content-between align-items-center">
+						<span>Login</span>
+						<i class="icofont-sign-in"></i>
+					</div>
+				</a>
 			</li>
 		</ul>
 	</div>
