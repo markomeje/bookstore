@@ -42,10 +42,10 @@
 					</li>
 				</ul>
 				<div class="d-flex align-items-center bottom-icons mt-2 mb-3">
-					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
+					<a href="<?= FACEBOOK_LINK; ?>" class="icon-box text-white text-center rounded-circle bg-rose mr-3" target="_blank">
 						<i class="icofont-facebook"></i>
 					</a>
-					<a href="" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
+					<a href="<?= INSTAGRAM_LINK; ?>" class="icon-box text-white text-center rounded-circle bg-rose mr-3" target="_blank">
 						<i class="icofont-instagram"></i>
 					</a>
 					<a href="<?= AMAZON_LINK; ?>" target="_blank" class="icon-box text-white text-center rounded-circle bg-rose mr-3">
@@ -63,6 +63,6 @@
 </div>
 <div class="footer-section py-5 bg-fogra">
 	<div class="container">
-		<h6 class="text-white">All Rights Reserved. <?= date('Y') === '2020' ? '2020' : '2020 - '. date('Y'); ?></h6>
+		<h6 class="text-white">Copyright © <?= date('Y') === '2020' ? '2020' : '2020 - '. date('Y'); ?> <a href="<?= WEBSITE_DOMAIN; ?>">Charlesukemenam.com</a> All Rights Reserved.</h6>
 	</div>
 </div>

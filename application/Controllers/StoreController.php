@@ -23,7 +23,7 @@ class StoreController extends Controller {
 		Cookie::set('book', $id, time() + BOOK_TRACKER_EXPIRY, COOKIE_PATH, COOKIE_DOMAIN, COOKIE_SECURE, COOKIE_HTTP);
 		$book = (new Books)->getBookById($id);
 		$title = isset($book->title) ? $book->title : '' ;
-		$data = ['title' => $title .' | Dr Charles O. Ukemenam', 'book' => $book, 'redirect' => WEBSITE_DOMAIN.'/store/book/'.$id];
+		$data = ['title' => $title .' By Dr Charles O. Ukemenam', 'book' => $book, 'redirect' => WEBSITE_DOMAIN.'/store/book/'.$id];
 		View::render('frontend', 'store/book', $data);
 	}
 

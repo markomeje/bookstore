@@ -33,6 +33,11 @@ class Mailer {
                     $mail->AddAddress($email);
                     $mail->addAttachment(PUBLIC_PATH . DS . 'pdfs' . DS . $data['book']);
                     break;
+                case (CONTACT_EMAIL_REQUEST):
+                    $mail->Body = self::contactEmailBody($email, $data);
+                    $mail->Subject = CONTACT_EMAIL_REQUEST_SUBJECT;
+                    $mail->AddAddress($email);
+                    break;
             }
             $mail->send();
         }catch(Exception $error) {
@@ -44,17 +49,17 @@ class Mailer {
 
 	private static function emailVerifyBody($email, $data) {
         $body  = "";
-        $body .= "Dear " . $email . ", Please Verify Your Email By Clicking On The Following Link: ";
-        $body .= EMAIL_VERIFICATION_URL . "/" . urlencode($data["token"]);
-        $body .= ". If you didn't Perform This Action With your email, Please contact the admin directly.";
+        $body .= "Dear " . $email . ", Please Verify Your Email By Clicking On The Following Link: "."\r\n";
+        $body .= EMAIL_VERIFICATION_URL . "/" . urlencode($data["token"])."\r\n";
+        $body .= ". If you didn't Perform This Action With your email, Please contact the admin directly."."\r\n";
         $body .= " Regards From Success And Motivation Book Series";
         return $body;
 	}
 
 	private static function passwordResetBody($email, $data) {
         $body  = "";
-        $body .= "Dear " . $email . ", Please Use The Following Token To Reset Your Password: ";
-        $body .= " " . $data["reset_token"];
+        $body .= "Dear " . $email . ", Please Use The Following Token To Reset Your Password: "."\r\n";
+        $body .= " " . $data["token"];
         $body .= " If you didn't Perform This Action With your email, Please contact the admin directly.";
         $body .= " Regards From Success And Motivation Book Series";
         return $body;
@@ -62,8 +67,16 @@ class Mailer {
 
     private static function sendBookAsAttachmentBody($email) {
         $body  = "";
-        $body .= "Dear " . $email . ", Thank You For Purchasing Our Book. Please find the book as an attachment below.";
+        $body .= "Dear " . $email . ", Thank You For Purchasing Our Book. Please find the book as an attachment below."."\r\n";
         $body .= " Regards From Success And Motivation Book Series";
+        return $body;
+    }
+
+    public static function contactEmailBody($email, $data) {
+        $body  = "";
+        $body .= ucwords($data['firstname']." ".$data['lastname'])." Contacted You With Email " . $data['email'] . " And Phone Number " . $data['phone'] . "\r\n"; 
+        $body .= "<h1>Message Content</h1>"."\r\n";
+        $body .= $data['message'];
         return $body;
     }
 

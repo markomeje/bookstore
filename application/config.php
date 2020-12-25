@@ -71,13 +71,13 @@ define('AMAZON_LINK', 'https://www.amazon.com/s?i=digital-text&rh=p_27%3ADr.+Cha
 define('OKADABOOKS_LINK', 'https://okadabooks.com/user/charlesukemenam');
 
 define('EMAIL_HOST', 'charlesukemenam.com');
-define('EMAIL_USERNAME', 'admin@charlesukemenam.com');
-define('EMAIL_PASSWORD', $_ENV['ADMIN_EMAIL_PASSWORD']);
+define('EMAIL_USERNAME', 'author@charlesukemenam.com');
+define('EMAIL_PASSWORD', $_ENV['AUTHOR_EMAIL_PASSWORD']);
 define('EMAIL_SMTPSECURE', 'ssl');
 define('EMAIL_PORT', 465);
-define('EMAIL_FROM', 'admin@charlesukemenam.com');
+define('EMAIL_FROM', 'author@charlesukemenam.com');
 define('EMAIL_FROM_NAME', 'Success and Motivation Book Series');
-define('EMAIL_REPLY_TO', 'admin@charlesukemenam.com');
+define('EMAIL_REPLY_TO', 'author@charlesukemenam.com');
 define('EMAIL_DEBUG', 4);
 define('EMAIL_AUTH', true);
 
@@ -89,6 +89,14 @@ define('SEND_BOOK_AS_ATTACHMENT', 2);
 define('SEND_BOOK_AS_ATTACHMENT_SUBJECT', 'Book Purchase Successfull');
 
 define('PASSWORD_RESET', 3);
+
+define('CONTACT_EMAIL_REQUEST', 4);
+define('CONTACT_EMAIL_REQUEST_SUBJECT', 'Contact Request');
+
+define('INSTAGRAM_LINK', 'https://www.instagram.com/charlesukemenam/');
+define('FACEBOOK_LINK', 'https://www.facebook.com/charlesoukemenam/');
+
+define('ADMIN_EMAIL', 'author@charlesukemenam.com');
 
 
 

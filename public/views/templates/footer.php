@@ -12,5 +12,7 @@
 <script src="<?= PUBLIC_URL; ?>/js/register.js" type="text/javascript"></script>
 <!-- payments JS -->
 <script src="<?= PUBLIC_URL; ?>/js/payments.js" type="text/javascript"></script>
+<!-- contact JS -->
+<script src="<?= PUBLIC_URL; ?>/js/contact.js" type="text/javascript"></script>
 </body>
 </html>

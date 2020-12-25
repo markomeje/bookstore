@@ -6,7 +6,7 @@
 			<div class="text-muted mb-3">Please fill in all fields below and we'll get back to you.</div>
 			<div class="row align-items-center">
 				<div class="col-12 mb-4">
-					<form action="javascript:;" method="post" autocomplete="off">
+					<form action="javascript:;" method="post" autocomplete="off" class="contact-form" data-action="<?= WEBSITE_DOMAIN; ?>/contact/contact">
 						<div class="form-row">
 							<div class="form-group input-group-lg col-md-6">
 								<label class="text-muted">Firstname</label>
@@ -35,10 +35,16 @@
 							<div class="col-12">
 								<label class="text-muted">Message</label>
 								<textarea class="form-control message" name="message" placeholder="e.g., Type Your Message Here." rows="5"></textarea>
+								<small class="text-danger message-error"></small>
 							</div>
 						</div>
+						<button type="submit" class="btn mt-4 btn-lg border-0 bg-tiffany text-white contact-button btn-block">
+							<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none contact-spinner mb-1">
+							Send
+						</button>
+						<div class="alert mb-3 mt-4 px-3 contact-message d-none"></div>
 					</form>
-					<p class="text-fogra mt-4 font-weight-bolder">You Can Call <a href="tel:08130052359">08130052359</a> Or Send A Mail To <a href="mailto:author@charlesukemenam.com">author@charlesukemenam.com</a></p>
+					<p class="text-fogra mt-3 font-weight-bolder">You Can Call <a href="tel:08130052359">08130052359</a> Or Send A Mail To <a href="mailto:author@charlesukemenam.com">author@charlesukemenam.com</a></p>
 				</div>
 			</div>
 		</div>

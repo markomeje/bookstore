@@ -27,7 +27,7 @@ class Register extends Model {
 
         try {
             $database = Database::connect();
-            $token = Generate::string(32);
+            $token = Generate::string(64);
             $data = ['status' => 'inactive', 'role' => 'user', 'email' => $post['email'], 'password' => password_hash($post['password'], PASSWORD_DEFAULT), 'phone' => $post['phone'], 'token' => $token];
             $database->beginTransaction();
             (new Users)->register($data);
@@ -60,7 +60,7 @@ class Register extends Model {
 
         try {
             $database = Database::connect();
-            $token = Generate::string(32);
+            $token = Generate::string(64);
             $data = ['email' => $post['email'], 'token' => $token];
             $database->beginTransaction();
             (new Users)->updateVerificationToken($data);

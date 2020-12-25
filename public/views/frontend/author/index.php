@@ -35,12 +35,17 @@
 						He was equally a former Senior Lecturer in Banking and Finance at two Polytechnics, namely:- IMT Enugu and Federal Polytechnic Oko, Anambra State for a period of six years in both institutions.
 					</div>
 				</div>
+				<div class="col-12 mb-4">
+					<div class="text-muted">
+						He was formarly Deputy Director Training (DDT), National Board of Community Banks, the fore-runner of the present-day Micro-Finance Banks in Nigeria, Abuja, from 1992 to march 1994. From April 1994 He served as Zonal Director, Benin City Edo State and later Zonal Director, Uyo Zone Covering four states in South-South Zone of Nigeria. He retired voluntarily from service in 2004. Thereafter, he went into Financial and Management Consultancy Services (through his consultancy company) while also lecturing in the National Open University of Nigeria (NOUN), Enugu Study centre.
+					</div>
+				</div>
 			</div>
 			<h2 class="text-fogra">Books Published</h2>
 		    <div class="row">
 				<div class="col-12 mb-4">
 					<div class="text-muted">
-						He is the author of Practice of Banking for Students and Professionals, published in 2001, and other books in motivation, self-development and entrepreneurial studies currently under publication.
+						He is the author of Practice of Banking for Students and Professionals, published in 2001, and other books in motivation, self-development and entrepreneurial studies currently under publication. All books are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a>
 					</div>
 				</div>
 			</div>
