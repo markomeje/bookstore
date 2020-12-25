@@ -24,19 +24,23 @@
 								<h6 class="mr-4 mb-3">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></h6>
 							</div>
 							<?php if(Bookstore\Library\Session::get('isLoggedIn') === false): ?>
-								<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="<?= WEBSITE_DOMAIN; ?>/register">Register Here</a> or <a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>">Login Here</a> to your existing account to proceed.</div>
-								<div class="d-flex align-items-center mb-4">
-									<a href="<?= WEBSITE_DOMAIN; ?>/register" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Register</a>
-									<a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>" class="btn bg-rose px-4 rounded-0 text-white">Login</a>
+								<div class="pb-4 mb-4 border-bottom">
+									<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="<?= WEBSITE_DOMAIN; ?>/register">Register Here</a> or <a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>">Login Here</a> to your existing account to proceed.</div>
+									<div class="d-flex align-items-center">
+										<a href="<?= WEBSITE_DOMAIN; ?>/register" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Register</a>
+										<a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>" class="btn bg-rose px-4 rounded-0 text-white">Login</a>
+									</div>
 								</div>
 							<?php else: ?>
-								<p class="text-muted">We'll send your book to your account email as soon as your payment is successfull.</p>
-								<a href="javascript:;" class="btn mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= $id; ?>">
-									<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none payment-spinner mb-1">
-									Buy Now
-								</a>
+								<div class="pb-4 mb-4 border-bottom">
+									<p class="text-muted">We'll send your book to your account email as soon as your payment is successfull.</p>
+									<a href="javascript:;" class="btn mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= $id; ?>">
+										<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none payment-spinner mb-1">
+										Buy Now
+									</a>
+								</div>
 							<?php endif; ?>
-                            <p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a>
+                            <p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a>, <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a> and <a href="<?= KOBO_LINK; ?>" target="_blank">Rakuten Kobo</a>.</p>
                             </p>
 						</div>
 					</div>

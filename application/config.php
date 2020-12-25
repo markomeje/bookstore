@@ -69,6 +69,7 @@ define('PAGINATION_DEFAULT_LIMIT', 30);
 
 define('AMAZON_LINK', 'https://www.amazon.com/s?i=digital-text&rh=p_27%3ADr.+Charles+O.+Ukemenam&s=relevancerank&text=Dr.+Charles+O.+Ukemenam&ref=dp_byline_sr_ebooks_1');
 define('OKADABOOKS_LINK', 'https://okadabooks.com/user/charlesukemenam');
+define('KOBO_LINK', 'https://www.kobo.com/ww/en/search?query=Dr.+Charles+O.+Ukemenam');
 
 define('EMAIL_HOST', 'charlesukemenam.com');
 define('EMAIL_USERNAME', 'author@charlesukemenam.com');

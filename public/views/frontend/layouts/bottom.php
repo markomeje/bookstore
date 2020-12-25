@@ -52,10 +52,22 @@
 						<i class="icofont-brand-amazon"></i>
 					</a>
 				</div>
-				<div>
-					<a href="<?= OKADABOOKS_LINK; ?>" target="_blank">
-						<img src="<?= PUBLIC_URL; ?>/images/assets/okadabooks.jpg" class="img-fluid">
-					</a>
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3 mb-4">
+						<a href="<?= KOBO_LINK; ?>" target="_blank">
+							<img src="<?= PUBLIC_URL; ?>/images/assets/kobo.png" class="img-fluid">
+						</a>
+					</div> 
+					<div class="col-12 col-md-4 col-lg-3">
+						<a href="<?= OKADABOOKS_LINK; ?>" target="_blank">
+							<img src="<?= PUBLIC_URL; ?>/images/assets/okadabooks.jpg" class="img-fluid">
+						</a>
+					</div>
+					<div class="col-12 col-md-4 col-lg-3 mb-4">
+						<a href="<?= AMAZON_LINK; ?>" target="_blank">
+							<img src="<?= PUBLIC_URL; ?>/images/assets/amazon.png" class="img-fluid">
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

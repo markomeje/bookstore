@@ -1,9 +1,9 @@
 <div class="wrapper">
 	<?php require FRONTEND_PATH . DS . 'layouts' . DS . 'navbar.php'; ?>
-	<div class="store-booklists-section bg-white">
+	<div class="store-booklists-section bg-alabaster">
 		<div class="container">
 			<h2 class="mb-2 text-fogra">All Books List</h2>
-			<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a></p>
+			<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a>, <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a> and <a href="<?= KOBO_LINK; ?>" target="_blank">Rakuten Kobo</a>.</p>
 			<?php if(empty($allBooks)): ?>
 				<div class="alert alert-info">No Books Yet</div>
 			<?php else: ?>
@@ -12,7 +12,7 @@
 						<?php $id = empty($book->id) ? 0 : $book->id; ?>
 						<?php $title = Bookstore\Core\Help::explodeImplodeByDelimeter(' ', '-', strtolower($book->title)); ?>
 						<div class="col-12 col-md-6 col-lg-3 mb-4">
-							<div class="card border-0 position-relative">
+							<div class="card bg-transparent border-0 position-relative">
 								<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>">
 									<img src="<?= PUBLIC_URL; ?>/images/books/<?= empty($book->image) ? 'def.jpg' : $book->image; ?>" class="card-img-top shadow">
 								</a>

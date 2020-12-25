@@ -3,17 +3,22 @@
 	<div class="home-banner-section w-100">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-md-7 col-lg-6 mb-5">
+				<div class="col-12 col-md-7 col-lg-6">
 					<h1 class="text-fogra">Success and <span class="text-tiffany">Motivation</span> Book Series<span class="text-rose">.</span></h1>
 					<div class="text-muted mb-4">The three-fold Purpose of our book series is to promote reading culture amongst the youths particularly, Nigerians and Africans in general.</div>
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center border-bottom pb-4 mb-4">
 						<a href="<?= WEBSITE_DOMAIN; ?>/store" class="btn px-4 border-0 rounded-0 bg-tiffany text-white mr-4">Visit Store</a>
 						<a href="<?= WEBSITE_DOMAIN; ?>/about" class="btn px-4 border-0 rounded-0 bg-rose text-white">Learn More</a>
 					</div>
+					<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a>, <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a> and <a href="<?= KOBO_LINK; ?>" target="_blank">Rakuten Kobo</a>.</p>
 				</div>
 				<div class="col-12 col-md-5 col-lg-6 mb-4">
-					<div class="">
-						<img src="<?= PUBLIC_URL; ?>/images/assets/plain.png" class="img-fluid h-100 w-100">
+					<div class="row">
+						<div class="col-12">
+							<a href="<?= AMAZON_LINK; ?>" target="_blank">
+								<img src="<?= PUBLIC_URL; ?>/images/assets/amazon.png" class="img-fluid">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -22,7 +27,7 @@
 	<div class="home-booklists-section bg-white">
 		<div class="container">
 			<h2 class="mb-2 text-fogra">Our Book Lists</h2>
-			<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a> and <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a></p>
+			<p class="text-muted">All Our Success and Motivation Book Series are also available on <a href="<?= AMAZON_LINK; ?>" target="_blank">Amazon</a>, <a href="<?= OKADABOOKS_LINK; ?>" target="_blank">Okada Books</a> and <a href="<?= KOBO_LINK; ?>" target="_blank">Rakuten Kobo</a>.</p>
 			<?php if(empty($allBooks)): ?>
 				<div class="alert alert-info">No Books Yet</div>
 			<?php else: ?>
