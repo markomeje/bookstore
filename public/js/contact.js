@@ -46,7 +46,6 @@
                 handleButton(button, spinner);
                 message.removeClass('d-none alert-danger').addClass('alert-success');
                 message.html('Thank You For Contacting Us. We Will Get Back To You Shortly.').fadeIn();
-                window.location.href = response.redirect
 
             } else if (response.status === 'error') {
                 handleButton(button, spinner);
