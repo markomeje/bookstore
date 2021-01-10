@@ -91,9 +91,9 @@ class Payments extends Model {
 			$pagination = Pagination::paginate("SELECT * FROM $this->table", [], $pageNumber);
             $offset = $pagination->getOffset();
             $limit = $pagination->itemsPerPage;
-			$database->prepare("SELECT * FROM $this->table ORDER BY date DESC LIMIT {$limit} OFFSET {$offset}");
+			$database->prepare("SELECT {$this->table}.*, users.phone, books.title FROM $this->table, books, users WHERE books.id = {$this->table}.book AND users.id = {$this->table}.user ORDER BY date DESC LIMIT {$limit} OFFSET {$offset}");
 			$database->execute();
-            return ["allPayments" => $database->fetchAll(), "pagination" => $pagination, "count" => $pagination->totalCount];
+            return ["payments" => $database->fetchAll(), "pagination" => $pagination, "count" => $pagination->totalCount];
 		} catch (Exception $error) {
 			Logger::log("GETTING ALL PAYMENT ERROR", $error->getMessage(), __FILE__, __LINE__);
 			return false;

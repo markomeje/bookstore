@@ -6,7 +6,7 @@
 	    		<a href="javascript:;" data-toggle="modal" data-target="#add-book" class="btn btn-sm bg-rose rounded-pill text-white text-decoration-none px-4">Add Book</a>
 	    		<?php require BACKEND_PATH . DS . 'books' . DS . 'partials' . DS . 'add.php'; ?>
 	    		<div class="">
-	    			<a href="" class="btn btn-sm bg-orange text-white text-decoration-none px-4 rounded-pill">Options <i class="icofont-caret-down"></i></a>
+	    			<a href="javascript:;" class="btn btn-sm bg-orange text-white text-decoration-none px-4 rounded-pill">Options <i class="icofont-caret-down"></i></a>
 	    		</div>
 	    	</div>
 	    	<div class="row mb-1" data-url="<?= WEBSITE_DOMAIN; ?>" data-images="<?= PUBLIC_URL; ?>/images">

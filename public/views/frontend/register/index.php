@@ -51,7 +51,7 @@
 							</button>
 							<div class="alert mt-4 px-3 register-message d-none"></div>
 							<div class="pt-3 pb-5">
-								<a href="<?= WEBSITE_DOMAIN; ?>/login" class="text-muted float-left">Already Have An Account? Login</a>
+								<a href="<?= WEBSITE_DOMAIN; ?>/login" class="float-left">Already Have An Account? Login</a>
 							</div>
 						</form>
 					</div>
