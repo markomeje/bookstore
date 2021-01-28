@@ -16,7 +16,7 @@
 							<div class="form-group input-group-lg">
 								<label for="" class="d-flex justify-content-between">
 									<span class="text-muted ">Password</span>
-									<a href="javascript:;" class="">Forgot Password?</a>
+									<!-- <a href="javascript:;" class="">Forgot Password?</a> -->
 								</label>
 								<input type="password" name="password" class="form-control form-control-lg password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
 								<small class="error password-error text-danger"></small>
