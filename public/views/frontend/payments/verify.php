@@ -2,7 +2,7 @@
 	<?php require FRONTEND_PATH . DS . 'layouts' . DS . 'navbar.php'; ?>
 	<div class="store-booklists-section bg-alabaster">
 		<div class="container">
-			<?php if(strtolower($payment) === 'success'): ?>
+			<?php if(isset($payment) && strtolower($payment) === 'success'): ?>
 				<div class="">
 					Your Payment Was Successfull And Your Book Has Been Sent To Your Account Email. If You Did Not Get Any Email, <a href="<?= WEBSITE_DOMAIN; ?>/contact">Contact Our Support.</a> Thank You.
 				</div>

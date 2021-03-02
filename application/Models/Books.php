@@ -42,7 +42,7 @@ class Books extends Model {
 			$pagination = Pagination::paginate("SELECT * FROM $this->table", [], $pageNumber);
             $offset = $pagination->getOffset();
             $limit = $pagination->itemsPerPage;
-			$database->prepare("SELECT * FROM $this->table ORDER BY date ASC LIMIT {$limit} OFFSET {$offset}");
+			$database->prepare("SELECT * FROM $this->table ORDER BY RAND() ASC LIMIT {$limit} OFFSET {$offset}");
 			$database->execute();
             return ['books' => $database->fetchAll(), 'pagination' => $pagination, 'count' => $pagination->totalCount];
 		} catch (Exception $error) {

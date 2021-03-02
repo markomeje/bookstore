@@ -10,7 +10,6 @@
     ],
 
     "require": {
-        "php": ">=7.1.0",
         "vlucas/phpdotenv": "^5.0",
         "yabacon/paystack-php": "2.1.20",
         "gregwar/captcha": "1.*",

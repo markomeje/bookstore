@@ -14,15 +14,16 @@
 					</div>
 					<div class="col-12 col-md-7 col-lg-8 mb-4">
 						<div class="card-body px-0">
-							<h6 class="text-fogra">
+							<h4 class="text-fogra">
 								<?= empty($book->title) ? '' : $book->title; ?>
-							</h6>
+							</h4>
 							<div class="text-muted mb-3 d-block">
 								<?= empty($book->description) ? '' : $book->description; ?>
 							</div>
 							<div class="d-flex">
-								<h6 class="mr-4 mb-3">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></h6>
+								<h4 class="mb-3">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></h4>
 							</div>
+							<h5 class="font-weight-bold">(PDF Format Only)</h5>
 							<?php if(Bookstore\Library\Session::get('isLoggedIn') === false): ?>
 								<div class="pb-4 mb-4 border-bottom">
 									<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="<?= WEBSITE_DOMAIN; ?>/register">Register Here</a> or <a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>">Login Here</a> to your existing account to proceed.</div>
@@ -32,11 +33,11 @@
 									</div>
 								</div>
 							<?php else: ?>
-								<div class="pb-4 mb-4 border-bottom">
-									<p class="text-muted">We'll send your book to your account email as soon as your payment is successfull.</p>
-									<a href="javascript:;" class="btn mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= $id; ?>">
-										<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-2 d-none payment-spinner mb-1">
-										Buy Now
+								<div class="pb-3 mb-4 border-bottom">
+									<p class="text-muted">Automatically recieve your book in your email on successful payment. Note that you can pay with either card, bank transfer, USSD or QR Code. Click <span class="font-weight-bold">Pay With Paystack</span> button below to proceed.</p>
+									<a href="javascript:;" class="btn btn-lg mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= isset($id) ? $id : 0; ?>">
+										<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-1 d-none payment-spinner">
+										Pay With Paystack
 									</a>
 								</div>
 							<?php endif; ?>

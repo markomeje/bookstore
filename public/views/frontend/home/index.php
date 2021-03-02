@@ -39,7 +39,7 @@
 						<div class="col-12 col-md-6 col-lg-4 mb-4">
 							<div class="card border-0 position-relative">
 								<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>">
-									<img src="<?= PUBLIC_URL; ?>/images/books/<?= empty($book->image) ? 'def.jpg' : $book->image; ?>" class="card-img-top shadow">
+									<img src="<?= PUBLIC_URL; ?>/images/books/<?= empty($book->image) ? 'def.jpg' : $book->image; ?>" class="card-img-top shadow-lg">
 								</a>
 								<div class="card-body px-0">
 									<h6 class="card-title mt-2">
@@ -48,7 +48,7 @@
 										</a>
 									</h6>
 									<a href="<?= WEBSITE_DOMAIN; ?>/store/book/<?= $id; ?>/<?= $title; ?>" class="card-text text-muted mb-3 d-block">
-										<?= Bookstore\Core\Help::limitStringLength(empty($book->description) ? '' : $book->description, 120); ?>
+										<?= Bookstore\Core\Help::limitStringLength(empty($book->description) ? '' : $book->description, 80); ?>
 									</a>
 									<div class="d-flex">
 										<p class="mr-4">NGN<?= empty($book->price) ? 0 : number_format($book->price); ?></p>
@@ -63,6 +63,7 @@
 					<?php endforeach; ?>
 				</div>
 			<?php endif; ?>
+			<h4 class="text-muted">To Visit Our Store, <a href="<?= WEBSITE_DOMAIN; ?>/store">Click Here</a> And View All Available Books.</h4>
 		</div>
 	</div>
 	<div class="home-author-section bg-alabaster">
