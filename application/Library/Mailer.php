@@ -77,7 +77,6 @@ class Mailer {
         $body .= "<h2>".ucwords($data['firstname']." ".$data['lastname'])." Contacted You</h2>". "\r\n";
         $body .= "Email " . $data['email'] . "\r\n";
         $body .= ". Phone Number " . $data['phone'] . "\r\n"; 
-        $body .= "<h4>Message Content</h4>"."\r\n";
         $body .= "<em>".$data['message']."</em>";
         return $body;
     }

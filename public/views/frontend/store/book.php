@@ -33,9 +33,10 @@
 									</div>
 								</div>
 							<?php else: ?>
-								<div class="pb-3 mb-4 border-bottom">
-									<p class="text-muted">Automatically recieve your book in your email on successful payment. Note that you can pay with either card, bank transfer, USSD or QR Code. Click <span class="font-weight-bold">Pay With Paystack</span> button below to proceed.</p>
-									<a href="javascript:;" class="btn btn-lg mb-4 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= isset($id) ? $id : 0; ?>">
+								<div class="pb-3 mb-3 border-bottom">
+									<p class="text-muted">Automatically recieve your book in your email on successful payment.</p> 
+									<p class="alert alert-info mb-4">Note that you can pay with either card, bank transfer, USSD or QR Code. Click <span class="font-weight-bold">Pay With Paystack</span> button below to proceed.</p>
+									<a href="javascript:;" class="btn btn-lg mb-3 border-0 bg-tiffany text-white payment-button rounded-0 px-4" data-url="<?= WEBSITE_DOMAIN; ?>/payments/pay/<?= isset($id) ? $id : 0; ?>">
 										<img src="<?= PUBLIC_URL; ?>/images/banners/spinner.svg" class="mr-1 d-none payment-spinner">
 										Pay With Paystack
 									</a>
