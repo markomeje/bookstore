@@ -96,7 +96,6 @@ define('CONTACT_EMAIL_REQUEST_SUBJECT', 'Contact Request');
 
 define('INSTAGRAM_LINK', 'https://www.instagram.com/charlesukemenam/');
 define('FACEBOOK_LINK', 'https://www.facebook.com/charlesoukemenam/');
-
 define('ADMIN_EMAIL', 'author@charlesukemenam.com');
 
 

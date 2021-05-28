@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= isset($title) ? $title : 'Success And Motivation Book Series Written By Dr. Charles O. Ukemenam'; ?></title>
     <meta name="description" content="Success and Motivation Book Series. Promotion of self-employment, poverty reduction and socio-economic develpment of the country, through self-empowerment and entrepreneurship development programmes and activities.">
-    <meta name="keywords" content="charlesukemenam, success, motivation, finance, business, entrepreneurship, banking, managemant, wealth, financial literacy.">
+    <meta name="keywords" content="Dr. Charles O. Ukemenam, success, motivation, finance, business, entrepreneurship, banking, managemant, wealth, financial literacy.">
     <meta name="copyright" content="charlesukemenam.com">
     <meta name="author" content="https://markomeje.com">
     <meta name="email" content="author@charlesukemenam.com">
@@ -21,7 +21,7 @@
     <meta name="Robots" content="INDEX,FOLLOW">
     <meta name="Revisit-after" content="7 Day">
     <meta property="og:title" content="<?= isset($title) ? $title : 'Success And Motivation Book Series Written By Dr. Charles O. Ukemenam'; ?>" />
-    <meta property="og:description" content="Success and Motivation Book Series. Promotion of self-employment, poverty reduction and socio-economic develpment of the country, through self-empowerment and entrepreneurship development programmes and activities." />
+    <meta property="og:description" content="Success and Motivation Book Series by Dr. Charles O. Ukemenam. Promotion of self-employment, poverty reduction and socio-economic develpment of the country, through self-empowerment and entrepreneurship development programmes and activities." />
     <meta property="og:url" content="https://charlesukemenam.com/" />
     <meta property="og:type" content="Website" />
     <meta property="og:image" content="<?= PUBLIC_URL; ?>/images/assets/logo.png" />

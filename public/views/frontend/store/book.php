@@ -25,7 +25,7 @@
 							</div>
 							<h5 class="font-weight-bold">(PDF Format Only)</h5>
 							<?php if(Bookstore\Library\Session::get('isLoggedIn') === false): ?>
-								<div class="pb-4 mb-4 border-bottom">
+								<div class="pb-4 mb-4 mt-3 border-bottom">
 									<div class="alert alert-info mb-4">Please, if you don't have an account, <a href="<?= WEBSITE_DOMAIN; ?>/register">Register Here</a> or <a href="<?= WEBSITE_DOMAIN; ?>/login/?redirect=<?= $redirect; ?>">Login Here</a> to your existing account to proceed.</div>
 									<div class="d-flex align-items-center">
 										<a href="<?= WEBSITE_DOMAIN; ?>/register" class="btn bg-tiffany px-4 rounded-0 text-white mr-3">Register</a>
